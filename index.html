@@ -628,7 +628,7 @@
                 <h2 class="modal-title">Complete Your Order</h2>
                 <p class="modal-subtitle">Enter your details to place your order via WhatsApp</p>
             </div>
-            <form id="checkout-form">
+            <form id="checkout-form" method="post" action="https://encantos-automations-n8n.qsirhi.easypanel.host/order">
                 <div class="form-group">
                     <label for="customer-name">Full Name</label>
                     <input type="text" id="customer-name" required>
@@ -657,7 +657,8 @@
                 </div>
                 <div class="modal-actions">
                     <button type="button" class="cancel-btn" id="cancel-order">Cancel</button>
-                    <button type="submit" class="submit-order"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
+                    <!--<button type="submit" class="submit-order"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>-->
+                    <button type="submit" class="submit-order"><i class="fab fa-whatsapp"></i> Confirm and send</button>
                 </div>
             </form>
         </div>
