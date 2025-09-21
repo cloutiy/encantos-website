@@ -658,7 +658,10 @@
                 </div>
                 <div class="modal-actions">
                     <button type="button" class="cancel-btn" id="cancel-order">Cancel</button>
-                    <button type="submit" class="submit-order"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
+                   <button type="submit" class="submit-order">
+  <i class="fas fa-paper-plane"></i> Place Order
+</button>
+
                 </div>
             </form>
         </div>
@@ -1126,7 +1129,7 @@
             checkoutForm.addEventListener('submit', (e) => {
                 e.preventDefault();
                 //sendOrderViaWhatsApp();
-                sendOrderViaN8n();
+                sendOrderToN8n();
             });
 
             // Search functionality - updated for dynamic search
