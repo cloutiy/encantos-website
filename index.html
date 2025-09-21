@@ -635,6 +635,10 @@
                     <input type="text" id="customer-name" required>
                 </div>
                 <div class="form-group">
+                    <label for="customer-dni">DNI</label>
+                    <input type="text" id="customer-dni" required>
+                </div>
+                <div class="form-group">
                     <label for="customer-email">Email Address</label>
                     <input type="email" id="customer-email" required>
                 </div>
@@ -1322,21 +1326,14 @@ function sendOrderToN8n() {
     const phone = document.getElementById('customer-phone').value;
     const address = document.getElementById('customer-address').value;
     const shippingMethod = document.getElementById('shipping-method').value;
+    const dni = document.getElementById('customer-dni').value;
 
     // Calculate order total
     const orderTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
 
     // Build order data
     const orderData = {
-        customer: {
-            name,
-            email,
-            phone,
-            address,
-            shippingMethod
-        },
-        cart,
-        total: orderTotal
+  customer: { name, email, phone, address, shippingMethod, dni }, cart, total: orderTotal
     };
 
     // Send to n8n webhook
