@@ -623,88 +623,791 @@
     </div>
 
     <!-- Checkout Modal -->
-<div class="form-group">
-<label for="customer-phone">Phone Number</label>
-<input type="tel" id="customer-phone" required>
-</div>
-<div class="form-group">
-<label for="customer-address">Shipping Address</label>
-<input type="text" id="customer-address" required>
-</div>
-<div class="form-group">
-<label for="shipping-method">Shipping Method</label>
-<select id="shipping-method" required>
-<option value="">Select a shipping method</option>
-<option value="Shalom">Shalom</option>
-<option value="Olva (domicilio)">Olva (domicilio)</option>
-<option value="Olva (oficina)">Olva (oficina)</option>
-<option value="Otro">Otro</option>
-</select>
-</div>
-<div class="modal-actions">
-<button type="button" class="cancel-btn" id="cancel-order">Cancel</button>
-<button type="submit" class="submit-order"><i class="fas fa-paper-plane"></i> Place Order</button>
-</div>
-</form>
-</div>
-</div>
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="checkout-modal">
+            <div class="modal-header">
+                <h2 class="modal-title">Complete Your Order</h2>
+                <p class="modal-subtitle">Enter your details to place your order via WhatsApp</p>
+            </div>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="customer-name">Full Name</label>
+                    <input type="text" id="customer-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-email">Email Address</label>
+                    <input type="email" id="customer-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">Phone Number</label>
+                    <input type="tel" id="customer-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-address">Shipping Address</label>
+                    <input type="text" id="customer-address" required>
+                </div>
+                <div class="form-group">
+                    <label for="shipping-method">Shipping Method</label>
+                    <select id="shipping-method" required>
+                        <option value="">Select a shipping method</option>
+                        <option value="Shalom">Shalom</option>
+                        <option value="Olva (domicilio)">Olva (domicilio)</option>
+                        <option value="Olva (oficina)">Olva (oficina)</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="cancel-btn" id="cancel-order">Cancel</button>
+                    <button type="submit" class="submit-order"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
+    <script>
+        // Sample product data
+    
+           const products = [
+    {
+        id: 1,
+        name: "Aceite de aguaje (30ml)",
+        description: "Aceite nutritivo de aguaje, rico en beta-carotenos. Protege la piel del envejecimiento prematuro, ayuda a regenerar estrías y cicatrices, y aclara manchas. Un antioxidante natural que protege de los radicales libres y los rayos UV.",
+        price: 35.00,
+        image: "https://encantos-automations-nocodb.qsirhi.easypanel.host/download/noco/p5l7gx1ys8m94lv/mhka9cevgz62vu6/czmj33tsgo7bpz3/sofa_EmIW0.png"
+    },
+    {
+        id: 2,
+        name: "Aceite de cannabis 10% (10ml)",
+        description: "Aceite de cannabis con una concentración del 10%, ideal para uso terapéutico y relajante.",
+        price: 250.00,
+        image: "https://images.unsplash.com/photo-1559656914-609822a5d8d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 3,
+        name: "Aceite de cannabis 5% (10ml)",
+        description: "Aceite de cannabis con una concentración del 5%, perfecto para introducción y uso moderado.",
+        price: 180.00,
+        image: "https://images.unsplash.com/photo-1621553986396-10e527f7fb6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 4,
+        name: "Aceite de ungurahui (30ml)",
+        description: "Aceite nutritivo de ungurahui, excelente para tratamientos capilares y cuidado de la piel. Rico en ácidos grasos esenciales, hidrata y regenera profundamente.",
+        price: 35.00,
+        image: "https://images.unsplash.com/photo-1603660024922-2e9edc5f5c4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 5,
+        name: "Acondicionador en crema (100ml)",
+        description: "Acondicionador en crema para un cabello suave, manejable y profundamente hidratado.",
+        price: 30.00,
+        image: "https://images.unsplash.com/photo-1596462102978-4b6b59813c6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 6,
+        name: "Bálsamo labial de achiote y cochinilla",
+        description: "Dale un color rojo natural a tus labios con este bálsamo nutritivo. Formulado con manteca de cacao, aceite de coco y aguaje para una hidratación profunda. Es comestible, con aroma a coco, y también funciona como rubor o sombra. Protege contra los rayos UV y mantiene tus labios perfectamente humectados. Presentación de 5 gr.",
+        price: 18.00,
+        image: "https://images.unsplash.com/photo-1603660024922-2e9edc5f5c4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 7,
+        name: "Bálsamo labial de chocolate",
+        description: "Labios de chocolate, ideal para cuidar, hidratar y suavizar. Elaborado con manteca de cacao, polen de abeja, chocolate 100%, aceite de coco, cera de abeja y miel. Sella la humedad y protege del clima. Aroma delicioso a chocolate. Presentación de 5 gr.",
+        price: 15.00,
+        image: "https://images.unsplash.com/photo-1570616943100-0f2d0edf695d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 8,
+        name: "Bálsamo labial natural",
+        description: "Bálsamo labial hidratante con manteca de cacao, cera de abeja, miel de abeja, coco y vainilla. Muy eficaz para labios secos y partidos. Entrega humectación, protección UV y un aroma agradable a vainilla y coco. 100% natural. Presentación de 5 gr.",
+        price: 12.00,
+        image: "https://images.unsplash.com/photo-1621553986396-10e527f7fb6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 9,
+        name: "Bloqueador solar \"yuyito kids\" (30gr)",
+        description: "Protector solar seguro y suave, formulado específicamente para la piel sensible de los niños. FPS 50, resistente al agua y con ingredientes naturales.",
+        price: 15.00,
+        image: "https://images.unsplash.com/photo-1590422234590-e6ae7e753247?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 10,
+        name: "Bloqueador solar (100ml)",
+        description: "Fotoprotector solar natural FPS 50. Forma una pantalla bloqueadora que protege contra los rayos UVB. Resistente al agua, apto para piel sensible y grasa. Aplicar 10 minutos antes de la exposición al sol.",
+        price: 70.00,
+        image: "https://images.unsplash.com/photo-1590422234590-e6ae7e753247?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 11,
+        name: "Bloqueador solar (30ml)",
+        description: "Tamaño práctico de nuestro fotoprotector solar natural FPS 50. Ideal para llevar a todas partes. Protección de amplio espectro, resistente al agua y apto para todo tipo de piel.",
+        price: 25.00,
+        image: "https://images.unsplash.com/photo-1590422234590-e6ae7e753247?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 12,
+        name: "Crema de ungurahui y romero para cabello (50gr)",
+        description: "Tratamiento para cabellos fuertes y saludables. Evita la caída, fortalece la raíz, combate la caspa y aporta humectación y brillo. Repara las fibras capilares, estimula el crecimiento y protege de la radiación UV. Apto para damas y caballeros. Se puede usar para peinar.",
+        price: 45.00,
+        image: "https://images.unsplash.com/photo-1596462102978-4b6b59813c6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 13,
+        name: "Crema nutritiva de aguaje (50gr)",
+        description: "Tratamiento antiestrías de uso nocturno. Regenera la piel, aclara manchas y calma irritaciones. Su alto contenido de antioxidantes y beta-carotenos protege del envejecimiento prematuro y de los rayos UV. Ayuda a producir colágeno para una piel más elástica.",
+        price: 45.00,
+        image: "https://images.unsplash.com/photo-1571781926291-9d9f9c6f1c6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 14,
+        name: "Desodorante activo en crema (85gr)",
+        description: "Neutraliza el olor todo el día de forma natural. Combate bacterias, es antiséptico y evita hongos. Formulado con carbón activo, aceites esenciales y arcilla. Libre de aluminio y químicos tóxicos. No causa irritación. Dura hasta 4 meses.",
+        price: 40.00,
+        image: "https://images.unsplash.com/photo-1603712610494-73e15278f65f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 15,
+        name: "Desodorante en crema \"yuyito kids\" (30gr)",
+        description: "Desodorante suave en crema, formulado para ser seguro para la piel delicada de los niños. Con aceites esenciales de lavanda, canela y clavo de olor. Libre de aluminio.",
+        price: 20.00,
+        image: "https://images.unsplash.com/photo-1603712610494-73e15278f65f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 16,
+        name: "Desodorante en crema de carbón activado (85gr)",
+        description: "Desodorante natural con carbón activado para una purificación y control de olores superior. Neutraliza bacterias, es antiséptico y ayuda a quitar manchas. Libre de aluminio. Muy efectivo y no irritante.",
+        price: 40.00,
+        image: "https://images.unsplash.com/photo-1603712610494-73e15278f65f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 17,
+        name: "Jabón de cacao y aguaje (100gr)",
+        description: "Jabón humectante e hidratante que elimina impurezas y toxinas de la piel. Formulado con aceite de coco, manteca de cacao, cacao, café y aceite de aguaje. Deja la piel suave con un delicioso aroma a chocolate. Apto para pieles secas.",
+        price: 13.00,
+        image: "https://images.unsplash.com/photo-1593537612373-cc361d8d1e6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 18,
+        name: "Jabón de cannabis y manzanilla (100gr)",
+        description: "Jabón antibacteriano y antiinflamatorio con cannabis y manzanilla. Ayuda a cicatrizar el acné, calma la comezón y las quemaduras solares. Relajante y emoliente, con un aroma fresco. Apto para piel mixta.",
+        price: 13.00,
+        image: "https://images.unsplash.com/photo-1593537612373-cc361d8d1e6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 19,
+        name: "Jabón de carbon activado (100gr)",
+        description: "Jabón antibacteriano ideal para el acné. Limpia profundamente, equilibra la grasa, elimina toxinas e impurezas. Actúa como un exfoliante suave gracias al carbón activado.",
+        price: 10.00,
+        image: "https://images.unsplash.com/photo-1593537612373-cc361d8d1e6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 20,
+        name: "Jabón de curcuma (100gr)",
+        description: "Jabón de cúrcuma, conocido por sus propiedades antiinflamatorias y antioxidantes para una piel radiante.",
+        price: 15.00,
+        image: "https://images.unsplash.com/photo-1593537612373-cc361d8d1e6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 21,
+        name: "Jabón de espirulina (80gr)",
+        description: "Jabón regenerativo con manteca de cacao, sacha inchi, ungurahui y espirulina. Brinda una limpieza suave, reactiva las células de la piel, protege contra radicales libres y radiación UV, y estimula la producción de colágeno. Humectante, hidratante y relajante. Apto para piel mixta.",
+        price: 15.00,
+        image: "https://images.unsplash.com/photo-1593537612373-cc361d8d1e6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 22,
+        name: "Jabón de hierba luisa y limon (100gr)",
+        description: "Jabón emoliente y refrescante con aceite de coco, almendras, manteca de cacao y aceite esencial de naranja. Perfecto para relajarse después de un día agotador; hidrata, desinflama, relaja y mejora el sueño. Ideal para una ducha nocturna. Aroma fresco.",
+        price: 10.00,
+        image: "https://images.unsplash.com/photo-1593537612373-cc361d8d1e6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 23,
+        name: "Jabón de maracuya (100gr)",
+        description: "Jabón hidratante y humectante con manteca de cacao, aceite de coco y aceite esencial de canela. Rico en Vitamina C, deja tu piel fresca, suave y renovada con un dulce aroma a frutas. Apto para todo tipo de piel.",
+        price: 10.00,
+        image: "https://images.unsplash.com/photo-1593537612373-cc361d8d1e6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 24,
+        name: "Jabón de orquidea (100gr)",
+        description: "Jabón humectante e hidratante con aloe vera, aceite de aguaje, aceite de pepa de uvas y extracto de orquídeas. Previene el envejecimiento prematuro, regenera la piel dañada y la nutre con minerales como calcio, hierro, zinc y magnesio. Protege de los rayos UV. Apto para piel mixta.",
+        price: 13.00,
+        image: "https://images.unsplash.com/photo-1593537612373-cc361d8d1e6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 25,
+        name: "Jabón de ruda (100gr)",
+        description: "Jabón para protección y limpieza energética. Elaborado con ruda hembra y macho, salvia y romero. Ayuda a neutralizar energías negativas y contra el mal ojo. Para salud, trabajo y negocios.",
+        price: 10.00,
+        image: "https://images.unsplash.com/photo-1593537612373-cc361d8d1e6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 26,
+        name: "Jabón exfoliante de cafe (100gr)",
+        description: "Jabón exfoliante con café, aceite de coco, manteca de cacao y aceite de pepas de uvas. Activa la circulación y ayuda a reducir la celulitis. La cafeína ayuda a eliminar toxinas y grasas, dejando la piel más tersa.",
+        price: 10.00,
+        image: "https://images.unsplash.com/photo-1593537612373-cc361d8d1e6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 27,
+        name: "Jabón para bebe y ninos (50gr)",
+        description: "Jabón suave y sanador con leche de coco, manzanilla y miel de abeja. Ideal para piel delicada y sensible. Super relajante, mantiene la piel suave y protegida. Libre de químicos tóxicos y aluminio.",
+        price: 10.00,
+        image: "https://images.unsplash.com/photo-1593537612373-cc361d8d1e6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 28,
+        name: "Jabón sangre de grado, copaiba y arnica (100gr)",
+        description: "Jabón cicatrizante efectivo para heridas y acné inflamado. Ayuda a desinfectar, funciona como antiinflamatorio y regenera la piel. Atenúa manchas y cicatrices recientes. Humectante e hidratante natural.",
+        price: 15.00,
+        image: "https://images.unsplash.com/photo-1593537612373-cc361d8d1e6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 29,
+        name: "Labial (cattleya fucsia)",
+        description: "Pinta tus labios al máximo con este vibrante color fucsia. Labial nutritivo e hidratante formulado con manteca de cacao, aceite de coco, cera de abejas, polen, miel y pigmentos minerales. Es comestible, de aroma dulce, y se puede usar como rubor o sombra. Libre de químicos tóxicos. Presentación de 5 gr.",
+        price: 27.00,
+        image: "https://images.unsplash.com/photo-1596461404969-9b70b3e4e733?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 30,
+        name: "Labial (coral pishcota)",
+        description: "Un tono coral suave y natural para labios hidratados y con color. Elaborado con ingredientes naturales como manteca de cacao y cera de abeja. Es comestible, nutritivo y multifuncional (labial, rubor, sombra). Libre de químicos tóxicos. Presentación de 5 gr.",
+        price: 27.00,
+        image: "https://images.unsplash.com/photo-1596461404969-9b70b3e4e733?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 31,
+        name: "Labial (rojo moshaka)",
+        description: "Un rojo intenso y clásico para un look audaz. Labial hidratante formulado con manteca de cacao, aceite de coco, cera de abejas, polen, miel y pigmentos minerales. Nutre, hidrata y pinta tus labios sin químicos tóxicos. Presentación de 5 gr.",
+        price: 27.00,
+        image: "https://images.unsplash.com/photo-1596461404969-9b70b3e4e733?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 32,
+        name: "Locion de aguaje (30ml)",
+        description: "Loción tratamiento para cicatrices y manchas en la piel. Aclara las manchas, es antioxidante y regenera la piel. Proporciona hidratación, humectación y elasticidad. Tonifica, protege de los rayos UV y ayuda con la producción de colágeno. Se recomienda refrigerar.",
+        price: 40.00,
+        image: "https://images.unsplash.com/photo-1603660024922-2e9edc5f5c4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 33,
+        name: "Locion de espirulina (30ml)",
+        description: "Loción formulada para pieles atópicas, sensibles y delicadas. De uso nocturno, ayuda a combatir la comezón de la dermatitis atópica. Brinda hidratación inmediata, previene el ingreso de alérgenos, protege de radiaciones solares y ayuda a cicatrizar el acné. Hipoalergénica y de rápida absorción. Refrigerar.",
+        price: 40.00,
+        image: "https://images.unsplash.com/photo-1571781926291-9d9f9c6f1c6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 34,
+        name: "Locion de ungurahui (30ml)",
+        description: "Loción nutritiva de ungurahui para restaurar la suavidad y elasticidad de la piel. Rica en ácidos grasos esenciales.",
+        price: 40.00,
+        image: "https://images.unsplash.com/photo-1603660024922-2e9edc5f5c4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 35,
+        name: "Locion repelente (100ml)",
+        description: "Repelente natural super efectivo con aceites esenciales de romero, muña, clavo de olor, lavanda, hierva luisa y eucalipto. Apto para niños y adultos. Cubre la piel evitando picaduras por hasta 5 horas. Hidrata y es apto para todo tipo de piel.",
+        price: 25.00,
+        image: "https://images.unsplash.com/photo-1603712610494-73e15278f65f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 36,
+        name: "Mascara de pestanas (maron)",
+        description: "Máscara de pestañas en color marrón para un look definido y natural.",
+        price: 27.00,
+        image: "https://images.unsplash.com/photo-1621607511095-9c782d5c567c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 37,
+        name: "Mascara de pestanas (negro)",
+        description: "Máscara de pestañas en color negro clásico para un impacto dramático.",
+        price: 27.00,
+        image: "https://images.unsplash.com/photo-1621607511095-9c782d5c567c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 38,
+        name: "Mascarilla solida",
+        description: "Mascarilla facial sólida, fácil de aplicar y enjuagar, para un tratamiento práctico.",
+        price: 25.00,
+        image: "https://images.unsplash.com/photo-1593537612373-cc361d8d1e6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 39,
+        name: "Orquídea cream antiedad (50gr)",
+        description: "Tratamiento anti-edad de lujo con aloe vera, manteca de cacao, aceite de aguaje, aceite de pepas de uvas, polen de abejas y extracto de orquídeas. Antioxidante, retrasa el envejecimiento, regula la pigmentación y nutre la piel con minerales. Deja la piel suave, luminosa y libre de impurezas.",
+        price: 45.00,
+        image: "https://images.unsplash.com/photo-1571781926291-9d9f9c6f1c6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 40,
+        name: "Pack \"yuyito kids\"",
+        description: "Pack especial para niños que incluye productos suaves y seguros para su cuidado diario.",
+        price: 55.00,
+        image: "https://images.unsplash.com/photo-1603712610494-73e15278f65f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 41,
+        name: "Pasta dental \"yuyito kids\" (30gr)",
+        description: "Pasta dental suave y segura para el cuidado dental de los más pequeños.",
+        price: 15.00,
+        image: "https://images.unsplash.com/photo-1603712610494-73e15278f65f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 42,
+        name: "Pasta dental vegano sin flúor (100gr)",
+        description: "Pasta dental vegana con carbonato de calcio, muña, sábila y betaina de coco. Tiene propiedades antiinflamatorias y antibacteriales. Limpia profundamente, elimina placa, previene caries y fortalece dientes y encías. Libre de flúor, parabenos, apta para veganos, celiacos, niños y adultos.",
+        price: 30.00,
+        image: "https://images.unsplash.com/photo-1603712610494-73e15278f65f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 43,
+        name: "Roll on analgesico con CBD (10gr)",
+        description: "Roll on analgésico con CBD para aliviar dolores musculares y articulares de forma localizada. Ayuda a aliviar contracturas y relajar músculos y articulaciones. Crema calmante recomendada para masajes.",
+        price: 40.00,
+        image: "https://images.unsplash.com/photo-1621553986396-10e527f7fb6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 44,
+        name: "Roll on para ojeras con CBD (10gr)",
+        description: "Roll on para el contorno de ojos con CBD, para reducir ojeras e hinchazón.",
+        price: 35.00,
+        image: "https://images.unsplash.com/photo-1621553986396-10e527f7fb6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 45,
+        name: "Shampoo herbal solido de romero y ungurahui (80gr)",
+        description: "Shampoo sólido herbal con romero y ungurahui. Hidrata, nutre y da brillo al cabello. Evita la caída, estimula el crecimiento y previene la caspa. La combinación de ungurahui, acai y linaza restaura cada fibra del pelo profundamente. Aroma a romero.",
+        price: 28.00,
+        image: "https://images.unsplash.com/photo-1596462102978-4b6b59813c6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 46,
+        name: "Stick herbal multifuncional (coral)",
+        description: "Stick multifuncional en tono coral para dar color a labios y mejillas. Formulado con ingredientes naturales nutritivos.",
+        price: 27.00,
+        image: "https://images.unsplash.com/photo-1596461404969-9b70b3e4e733?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 47,
+        name: "Stick herbal multifuncional (rojo)",
+        description: "Stick multifuncional en tono rojo para un look vibrante en labios y mejillas. Formulado con ingredientes naturales nutritivos.",
+        price: 27.00,
+        image: "https://images.unsplash.com/photo-1596461404969-9b70b3e4e733?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 48,
+        name: "Stick iluminador (dorado)",
+        description: "Stick iluminador en tono dorado para realzar los puntos altos del rostro.",
+        price: 27.00,
+        image: "https://images.unsplash.com/photo-1621607511095-9c782d5c567c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 49,
+        name: "Stick iluminador (rosado perlado)",
+        description: "Stick iluminador en tono rosado perlado para un brillo suave y natural.",
+        price: 27.00,
+        image: "https://images.unsplash.com/photo-1621607511095-9c782d5c567c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 50,
+        name: "Unguento cannabis y manzanilla (50gr)",
+        description: "Ungüento para aliviar dolores en los músculos y sanar la piel. Calma irritación y prurito, ayuda a eliminar bacterias que causan acné. Recomendado para masajes calmantes y relajantes. Hidratante, reafirmante, regenerador y rico en ácidos grasos esenciales y Vitamina E. No contiene alcanfor.",
+        price: 45.00,
+        image: "https://images.unsplash.com/photo-1621553986396-10e527f7fb6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 51,
+        name: "Unguento de espirulina (50gr)",
+        description: "Ungüento nutritivo de espirulina para tratar y rejuvenecer la piel. Aporta flexibilidad, suavidad y elasticidad, ayudando a luchar contra el envejecimiento prematuro. Protege contra la radiación UV y es antiinflamatorio.",
+        price: 50.00,
+        image: "https://images.unsplash.com/photo-1571781926291-9d9f9c6f1c6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 52,
+        name: "Unguento nutritivo de aguaje (50gr)",
+        description: "Ungüento profundamente nutritivo con aguaje para pieles secas o dañadas. Ayuda a regenerar estrías y cicatrices, aclara manchas y protege del envejecimiento prematuro.",
+        price: 45.00,
+        image: "https://images.unsplash.com/photo-1603660024922-2e9edc5f5c4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 53,
+        name: "Unguento orquídea antiedad (50gr)",
+        description: "Ungüento antiedad con orquídea para una acción intensiva contra las arrugas. Nutre la piel con minerales, manteniéndola suave, luminosa y libre de impurezas.",
+        price: 45.00,
+        image: "https://images.unsplash.com/photo-1571781926291-9d9f9c6f1c6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 54,
+        name: "Oleo amazonico",
+        description: "Óleo amazónico, una mezcla de aceites preciosos de la selva para diversos usos nutritivos.",
+        price: 55.00,
+        image: "https://images.unsplash.com/photo-1603660024922-2e9edc5f5c4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    }
+];
 
-<script>
-// --- existing JS for cart, products, UI remains ---
+        // DOM Elements
+        const productsGrid = document.getElementById('products-grid');
+        const cartBtn = document.getElementById('cart-btn');
+        const cartSidebar = document.getElementById('cart-sidebar');
+        const closeCart = document.getElementById('close-cart');
+        const cartItems = document.getElementById('cart-items');
+        const cartCount = document.getElementById('cart-count');
+        const cartTotal = document.getElementById('cart-total');
+        const checkoutBtn = document.getElementById('checkout-btn');
+        const modalOverlay = document.getElementById('modal-overlay');
+        const cancelOrder = document.getElementById('cancel-order');
+        const checkoutForm = document.getElementById('checkout-form');
+        const searchInput = document.getElementById('search-input');
+        const searchBtn = document.getElementById('search-btn');
 
+        // Cart state
+        let cart = [];
 
-// Replace WhatsApp function with n8n webhook call
+        // Initialize the page
+        function init() {
+            renderProducts();
+            updateCartUI();
+            setupEventListeners();
+        }
+
+        // Render products to the page
+        function renderProducts(productsToRender = products) {
+            productsGrid.innerHTML = '';
+            
+            productsToRender.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-price">S/${product.price.toFixed(2)}</div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn decrease" data-id="${product.id}">-</button>
+                            <input type="number" class="quantity-input" data-id="${product.id}" value="1" min="1">
+                            <button class="quantity-btn increase" data-id="${product.id}">+</button>
+                        </div>
+                        <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
+                    </div>
+                `;
+                productsGrid.appendChild(productCard);
+            });
+        }
+
+        // Set up event listeners
+        function setupEventListeners() {
+            // Cart toggle
+            cartBtn.addEventListener('click', () => {
+                cartSidebar.classList.toggle('open');
+            });
+
+            closeCart.addEventListener('click', () => {
+                cartSidebar.classList.remove('open');
+            });
+
+            // Checkout process
+            checkoutBtn.addEventListener('click', () => {
+                if (cart.length === 0) {
+                    alert('Your cart is empty. Add some products first!');
+                    return;
+                }
+                modalOverlay.classList.add('open');
+            });
+
+            cancelOrder.addEventListener('click', () => {
+                modalOverlay.classList.remove('open');
+            });
+
+            // Form submission
+            checkoutForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                //sendOrderViaWhatsApp();
+                sendOrderViaN8n();
+            });
+
+            // Search functionality - updated for dynamic search
+            searchInput.addEventListener('input', searchProducts);
+            searchBtn.addEventListener('click', searchProducts);
+
+            // Delegate events for product interactions
+            document.addEventListener('click', (e) => {
+                // Increase quantity
+                if (e.target.classList.contains('increase')) {
+                    const id = parseInt(e.target.dataset.id);
+                    const input = document.querySelector(`.quantity-input[data-id="${id}"]`);
+                    input.value = parseInt(input.value) + 1;
+                }
+                
+                // Decrease quantity
+                if (e.target.classList.contains('decrease')) {
+                    const id = parseInt(e.target.dataset.id);
+                    const input = document.querySelector(`.quantity-input[data-id="${id}"]`);
+                    if (parseInt(input.value) > 1) {
+                        input.value = parseInt(input.value) - 1;
+                    }
+                }
+                
+                // Add to cart
+                if (e.target.classList.contains('add-to-cart')) {
+                    const id = parseInt(e.target.dataset.id);
+                    const input = document.querySelector(`.quantity-input[data-id="${id}"]`);
+                    const quantity = parseInt(input.value);
+                    addToCart(id, quantity);
+                    input.value = 1; // Reset quantity input
+                    
+                    // Clear search input after adding to cart
+                    searchInput.value = '';
+                    renderProducts(); // Show all products again
+                }
+                
+                // Remove item from cart
+                if (e.target.classList.contains('remove-item')) {
+                    const id = parseInt(e.target.dataset.id);
+                    removeFromCart(id);
+                }
+            });
+
+            // Update quantity in cart
+            cartItems.addEventListener('change', (e) => {
+                if (e.target.classList.contains('cart-item-quantity-input')) {
+                    const id = parseInt(e.target.dataset.id);
+                    const quantity = parseInt(e.target.value);
+                    updateCartItemQuantity(id, quantity);
+                }
+            });
+        }
+
+        // Add product to cart
+        function addToCart(productId, quantity) {
+            const product = products.find(p => p.id === productId);
+            const existingItem = cart.find(item => item.id === productId);
+            
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    quantity: quantity
+                });
+            }
+            
+            updateCartUI();
+            showNotification(`${product.name} added to cart!`);
+        }
+
+        // Remove product from cart
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCartUI();
+        }
+
+        // Update cart item quantity
+        function updateCartItemQuantity(productId, quantity) {
+            if (quantity < 1) {
+                removeFromCart(productId);
+                return;
+            }
+            
+            const item = cart.find(item => item.id === productId);
+            if (item) {
+                item.quantity = quantity;
+                updateCartUI();
+            }
+        }
+
+        // Update cart UI
+        function updateCartUI() {
+            cartItems.innerHTML = '';
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
+                cartCount.textContent = '0';
+                cartTotal.textContent = '$0.00';
+                return;
+            }
+            
+            let total = 0;
+            let count = 0;
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                count += item.quantity;
+                
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                    <div class="cart-item-details">
+                        <h3 class="cart-item-name">${item.name}</h3>
+                        <div class="cart-item-price">S/${item.price.toFixed(2)} × ${item.quantity} = S/${itemTotal.toFixed(2)}</div>
+                        <div class="cart-item-quantity">
+                            <label for="quantity-${item.id}">Qty:</label>
+                            <input type="number" id="quantity-${item.id}" class="cart-item-quantity-input" 
+                                data-id="${item.id}" value="${item.quantity}" min="1">
+                        </div>
+                        <button class="remove-item" data-id="${item.id}">Remove</button>
+                    </div>
+                `;
+                cartItems.appendChild(cartItem);
+            });
+            
+            cartCount.textContent = count;
+            cartTotal.textContent = `S/${total.toFixed(2)}`;
+        }
+
+        // Search products - updated for dynamic search
+        function searchProducts() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                renderProducts();
+                return;
+            }
+            
+            const filteredProducts = products.filter(product => 
+                product.name.toLowerCase().includes(searchTerm) || 
+                product.description.toLowerCase().includes(searchTerm)
+            );
+            
+            productsGrid.innerHTML = '';
+            
+            if (filteredProducts.length === 0) {
+                productsGrid.innerHTML = '<p class="no-results">No products found. Try a different search term.</p>';
+                return;
+            }
+            
+            renderProducts(filteredProducts);
+        }
+
+        // Show notification
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #25D366;
+                color: white;
+                padding: 12px 24px;
+                border-radius: 50px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                z-index: 2000;
+                animation: fadeIn 0.3s, fadeOut 0.3s 2.7s forwards;
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 3000);
+        }
+
+        // Send order to n8n webhook
 function sendOrderToN8n() {
-const name = document.getElementById('customer-name').value;
-const email = document.getElementById('customer-email').value;
-const phone = document.getElementById('customer-phone').value;
-const address = document.getElementById('customer-address').value;
-const shippingMethod = document.getElementById('shipping-method').value;
+    const name = document.getElementById('customer-name').value;
+    const email = document.getElementById('customer-email').value;
+    const phone = document.getElementById('customer-phone').value;
+    const address = document.getElementById('customer-address').value;
+    const shippingMethod = document.getElementById('shipping-method').value;
 
+    // Calculate order total
+    const orderTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
 
-const orderTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+    // Build order data
+    const orderData = {
+        customer: {
+            name,
+            email,
+            phone,
+            address,
+            shippingMethod
+        },
+        cart,
+        total: orderTotal
+    };
 
-
-const orderData = {
-customer: { name, email, phone, address, shippingMethod },
-cart,
-total: orderTotal
-};
-
-
-fetch("https://encantos-automations-n8n.qsirhi.easypanel.host/webhook-test/order", {
-method: "POST",
-headers: { "Content-Type": "application/json" },
-body: JSON.stringify(orderData)
-})
-.then(response => {
-if (response.ok) {
-showNotification("Order placed successfully!");
-modalOverlay.classList.remove('open');
-cart = [];
-updateCartUI();
-checkoutForm.reset();
-} else {
-alert("There was an error placing your order. Please try again.");
+    // Send to n8n webhook
+    fetch("https://encantos-automations-n8n.qsirhi.easypanel.host/webhook-test/order", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(orderData)
+    })
+    .then(response => {
+        if (response.ok) {
+            showNotification("Order placed successfully!");
+            modalOverlay.classList.remove('open');
+            cart = [];
+            updateCartUI();
+            checkoutForm.reset();
+        } else {
+            alert("There was an error placing your order. Please try again.");
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("Network error. Please try again.");
+    });
 }
-})
-.catch(error => {
-console.error("Error:", error);
-alert("Network error. Please try again.");
-});
-}
 
+        
+        
+        // Send order via WhatsApp
+        function sendOrderViaWhatsApp() {
+            const name = document.getElementById('customer-name').value;
+            const email = document.getElementById('customer-email').value;
+            const phone = document.getElementById('customer-phone').value;
+            const address = document.getElementById('customer-address').value;
+            const shippingMethod = document.getElementById('shipping-method').value;
+            
+            // Calculate order total
+            const orderTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+            
+            // Create order summary
+            let orderSummary = `New Order from ${name}%0A%0A`;
+            orderSummary += `*Contact Information:*%0A`;
+            orderSummary += `Email: ${email}%0A`;
+            orderSummary += `Phone: ${phone}%0A`;
+            orderSummary += `Address: ${address}%0A`;
+            orderSummary += `Shipping Method: ${shippingMethod}%0A%0A`;
+            orderSummary += `*Order Details:*%0A`;
+            
+            cart.forEach(item => {
+                orderSummary += `- ${item.name} (Qty: ${item.quantity}) - S/${(item.price * item.quantity).toFixed(2)}%0A`;
+            });
+            
+            orderSummary += `%0A*Order Total: S/${orderTotal.toFixed(2)}*`;
+            
+            // Create WhatsApp URL
+            const whatsappURL = `https://wa.me/1234567890?text=${orderSummary}`;
+            
+            // Open WhatsApp in a new tab
+            window.open(whatsappURL, '_blank');
+            
+            // Close modal and reset cart
+            modalOverlay.classList.remove('open');
+            cart = [];
+            updateCartUI();
+            checkoutForm.reset();
+            
+            // Show confirmation message
+            showNotification('Order placed successfully! Check your WhatsApp.');
+        }
 
-// Update event listener to call n8n function
-checkoutForm.addEventListener('submit', (e) => {
-e.preventDefault();
-sendOrderToN8n();
-});
-
-
-// --- rest of your JS (init, cart functions, etc.) remain unchanged ---
-</script>
-<script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="54928"></script>
+        // Initialize the app
+        init();
+    </script>
+    <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="54928"></script>
 </body>
 </html>
