@@ -1347,21 +1347,19 @@ function sendOrderToN8n() {
         },
         body: JSON.stringify(orderData)
     })
-    .then(response => {
-        if (response.ok) {
-            showNotification("Order placed successfully!");
-            modalOverlay.classList.remove('open');
-            cart = [];
-            updateCartUI();
-            checkoutForm.reset();
-        } else {
-            alert("There was an error placing your order. Please try again.");
-        }
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        alert("Network error. Please try again.");
-    });
+    .then(async response => {
+    if (!response.ok) {
+        throw new Error("Order submission failed");
+    }
+    const html = await response.text();   // get HTML returned by n8n
+    document.open();
+    document.write(html);                 // replace current page with thank-you page
+    document.close();
+})
+.catch(error => {
+    console.error("Error:", error);
+    alert("Network error. Please try again.");
+});
 }
 
         
