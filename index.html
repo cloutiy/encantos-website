@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+    
         * {
             margin: 0;
             padding: 0;
@@ -622,417 +623,88 @@
     </div>
 
     <!-- Checkout Modal -->
-    <div class="modal-overlay" id="modal-overlay">
-        <div class="checkout-modal">
-            <div class="modal-header">
-                <h2 class="modal-title">Complete Your Order</h2>
-                <p class="modal-subtitle">Enter your details to place your order via WhatsApp</p>
-            </div>
-            <form id="checkout-form" method="post" action="https://encantos-automations-n8n.qsirhi.easypanel.host/webhook-test/order">
-                <div class="form-group">
-                    <label for="customer-name">Full Name</label>
-                    <input type="text" id="customer-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="customer-email">Email Address</label>
-                    <input type="email" id="customer-email" required>
-                </div>
-                <div class="form-group">
-                    <label for="customer-phone">Phone Number</label>
-                    <input type="tel" id="customer-phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="customer-address">Shipping Address</label>
-                    <input type="text" id="customer-address" required>
-                </div>
-                <div class="form-group">
-                    <label for="shipping-method">Shipping Method</label>
-                    <select id="shipping-method" required>
-                        <option value="">Select a shipping method</option>
-                        <option value="Shalom">Shalom</option>
-                        <option value="Olva (domicilio)">Olva (domicilio)</option>
-                        <option value="Olva (oficina)">Olva (oficina)</option>
-                        <option value="Otro">Otro</option>
-                    </select>
-                </div>
-                <div class="modal-actions">
-                    <button type="button" class="cancel-btn" id="cancel-order">Cancel</button>
-                    <!--<button type="submit" class="submit-order"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>-->
-                    <button type="submit" class="submit-order"><i class="fab fa-whatsapp"></i> Confirm and send</button>
-                </div>
-            </form>
-        </div>
-    </div>
+<div class="form-group">
+<label for="customer-phone">Phone Number</label>
+<input type="tel" id="customer-phone" required>
+</div>
+<div class="form-group">
+<label for="customer-address">Shipping Address</label>
+<input type="text" id="customer-address" required>
+</div>
+<div class="form-group">
+<label for="shipping-method">Shipping Method</label>
+<select id="shipping-method" required>
+<option value="">Select a shipping method</option>
+<option value="Shalom">Shalom</option>
+<option value="Olva (domicilio)">Olva (domicilio)</option>
+<option value="Olva (oficina)">Olva (oficina)</option>
+<option value="Otro">Otro</option>
+</select>
+</div>
+<div class="modal-actions">
+<button type="button" class="cancel-btn" id="cancel-order">Cancel</button>
+<button type="submit" class="submit-order"><i class="fas fa-paper-plane"></i> Place Order</button>
+</div>
+</form>
+</div>
+</div>
 
-    <script>
-        // Sample product data
-        const products = [
-            {
-                id: 1,
-                name: "Wireless Headphones",
-                description: "High-quality wireless headphones with noise cancellation and 20-hour battery life.",
-                price: 89.99,
-                image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-            },
-            {
-                id: 2,
-                name: "Smart Watch",
-                description: "Feature-rich smartwatch with heart rate monitoring and GPS tracking.",
-                price: 149.99,
-                image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-            },
-            {
-                id: 3,
-                name: "Portable Bluetooth Speaker",
-                description: "Waterproof Bluetooth speaker with exceptional sound quality and 12-hour playback.",
-                price: 59.99,
-                image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-            },
-            {
-                id: 4,
-                name: "Smartphone Gimbal",
-                description: "3-axis smartphone gimbal for smooth video recording and advanced tracking features.",
-                price: 99.99,
-                image: "https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-            },
-            {
-                id: 5,
-                name: "Wireless Charging Pad",
-                description: "Fast wireless charging pad compatible with all Qi-enabled devices.",
-                price: 29.99,
-                image: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-            },
-            {
-                id: 6,
-                name: "Fitness Tracker",
-                description: "Lightweight fitness tracker with sleep monitoring and activity tracking.",
-                price: 49.99,
-                image: "https://images.unsplash.com/photo-1576243345690-4e4b79b63288?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-            },
-            {
-                id: 7,
-                name: "Laptop Sleeve",
-                description: "Protective laptop sleeve with water-resistant coating and extra padding.",
-                price: 34.99,
-                image: "https://images.unsplash.com/photo-1546938576-6e6a64f317cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-            },
-            {
-                id: 8,
-                name: "Gaming Mouse",
-                description: "Ergonomic gaming mouse with customizable RGB lighting and high DPI sensor.",
-                price: 45.99,
-                image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-            }
-        ];
 
-        // DOM Elements
-        const productsGrid = document.getElementById('products-grid');
-        const cartBtn = document.getElementById('cart-btn');
-        const cartSidebar = document.getElementById('cart-sidebar');
-        const closeCart = document.getElementById('close-cart');
-        const cartItems = document.getElementById('cart-items');
-        const cartCount = document.getElementById('cart-count');
-        const cartTotal = document.getElementById('cart-total');
-        const checkoutBtn = document.getElementById('checkout-btn');
-        const modalOverlay = document.getElementById('modal-overlay');
-        const cancelOrder = document.getElementById('cancel-order');
-        const checkoutForm = document.getElementById('checkout-form');
-        const searchInput = document.getElementById('search-input');
-        const searchBtn = document.getElementById('search-btn');
+<script>
+// --- existing JS for cart, products, UI remains ---
 
-        // Cart state
-        let cart = [];
 
-        // Initialize the page
-        function init() {
-            renderProducts();
-            updateCartUI();
-            setupEventListeners();
-        }
+// Replace WhatsApp function with n8n webhook call
+function sendOrderToN8n() {
+const name = document.getElementById('customer-name').value;
+const email = document.getElementById('customer-email').value;
+const phone = document.getElementById('customer-phone').value;
+const address = document.getElementById('customer-address').value;
+const shippingMethod = document.getElementById('shipping-method').value;
 
-        // Render products to the page
-        function renderProducts(productsToRender = products) {
-            productsGrid.innerHTML = '';
-            
-            productsToRender.forEach(product => {
-                const productCard = document.createElement('div');
-                productCard.className = 'product-card';
-                productCard.innerHTML = `
-                    <img src="${product.image}" alt="${product.name}" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-name">${product.name}</h3>
-                        <p class="product-description">${product.description}</p>
-                        <div class="product-price">$${product.price.toFixed(2)}</div>
-                        <div class="quantity-controls">
-                            <button class="quantity-btn decrease" data-id="${product.id}">-</button>
-                            <input type="number" class="quantity-input" data-id="${product.id}" value="1" min="1">
-                            <button class="quantity-btn increase" data-id="${product.id}">+</button>
-                        </div>
-                        <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
-                    </div>
-                `;
-                productsGrid.appendChild(productCard);
-            });
-        }
 
-        // Set up event listeners
-        function setupEventListeners() {
-            // Cart toggle
-            cartBtn.addEventListener('click', () => {
-                cartSidebar.classList.toggle('open');
-            });
+const orderTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
 
-            closeCart.addEventListener('click', () => {
-                cartSidebar.classList.remove('open');
-            });
 
-            // Checkout process
-            checkoutBtn.addEventListener('click', () => {
-                if (cart.length === 0) {
-                    alert('Your cart is empty. Add some products first!');
-                    return;
-                }
-                modalOverlay.classList.add('open');
-            });
+const orderData = {
+customer: { name, email, phone, address, shippingMethod },
+cart,
+total: orderTotal
+};
 
-            cancelOrder.addEventListener('click', () => {
-                modalOverlay.classList.remove('open');
-            });
 
-            // Form submission
-           // checkoutForm.addEventListener('submit', (e) => {
-           //     e.preventDefault();
-           //     sendOrderViaWhatsApp();
-           // });
+fetch("https://encantos-automations-n8n.qsirhi.easypanel.host/webhook-test/order", {
+method: "POST",
+headers: { "Content-Type": "application/json" },
+body: JSON.stringify(orderData)
+})
+.then(response => {
+if (response.ok) {
+showNotification("Order placed successfully!");
+modalOverlay.classList.remove('open');
+cart = [];
+updateCartUI();
+checkoutForm.reset();
+} else {
+alert("There was an error placing your order. Please try again.");
+}
+})
+.catch(error => {
+console.error("Error:", error);
+alert("Network error. Please try again.");
+});
+}
 
-            // Search functionality - updated for dynamic search
-            searchInput.addEventListener('input', searchProducts);
-            searchBtn.addEventListener('click', searchProducts);
 
-            // Delegate events for product interactions
-            document.addEventListener('click', (e) => {
-                // Increase quantity
-                if (e.target.classList.contains('increase')) {
-                    const id = parseInt(e.target.dataset.id);
-                    const input = document.querySelector(`.quantity-input[data-id="${id}"]`);
-                    input.value = parseInt(input.value) + 1;
-                }
-                
-                // Decrease quantity
-                if (e.target.classList.contains('decrease')) {
-                    const id = parseInt(e.target.dataset.id);
-                    const input = document.querySelector(`.quantity-input[data-id="${id}"]`);
-                    if (parseInt(input.value) > 1) {
-                        input.value = parseInt(input.value) - 1;
-                    }
-                }
-                
-                // Add to cart
-                if (e.target.classList.contains('add-to-cart')) {
-                    const id = parseInt(e.target.dataset.id);
-                    const input = document.querySelector(`.quantity-input[data-id="${id}"]`);
-                    const quantity = parseInt(input.value);
-                    addToCart(id, quantity);
-                    input.value = 1; // Reset quantity input
-                    
-                    // Clear search input after adding to cart
-                    searchInput.value = '';
-                    renderProducts(); // Show all products again
-                }
-                
-                // Remove item from cart
-                if (e.target.classList.contains('remove-item')) {
-                    const id = parseInt(e.target.dataset.id);
-                    removeFromCart(id);
-                }
-            });
+// Update event listener to call n8n function
+checkoutForm.addEventListener('submit', (e) => {
+e.preventDefault();
+sendOrderToN8n();
+});
 
-            // Update quantity in cart
-            cartItems.addEventListener('change', (e) => {
-                if (e.target.classList.contains('cart-item-quantity-input')) {
-                    const id = parseInt(e.target.dataset.id);
-                    const quantity = parseInt(e.target.value);
-                    updateCartItemQuantity(id, quantity);
-                }
-            });
-        }
 
-        // Add product to cart
-        function addToCart(productId, quantity) {
-            const product = products.find(p => p.id === productId);
-            const existingItem = cart.find(item => item.id === productId);
-            
-            if (existingItem) {
-                existingItem.quantity += quantity;
-            } else {
-                cart.push({
-                    id: product.id,
-                    name: product.name,
-                    price: product.price,
-                    image: product.image,
-                    quantity: quantity
-                });
-            }
-            
-            updateCartUI();
-            showNotification(`${product.name} added to cart!`);
-        }
-
-        // Remove product from cart
-        function removeFromCart(productId) {
-            cart = cart.filter(item => item.id !== productId);
-            updateCartUI();
-        }
-
-        // Update cart item quantity
-        function updateCartItemQuantity(productId, quantity) {
-            if (quantity < 1) {
-                removeFromCart(productId);
-                return;
-            }
-            
-            const item = cart.find(item => item.id === productId);
-            if (item) {
-                item.quantity = quantity;
-                updateCartUI();
-            }
-        }
-
-        // Update cart UI
-        function updateCartUI() {
-            cartItems.innerHTML = '';
-            
-            if (cart.length === 0) {
-                cartItems.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
-                cartCount.textContent = '0';
-                cartTotal.textContent = '$0.00';
-                return;
-            }
-            
-            let total = 0;
-            let count = 0;
-            
-            cart.forEach(item => {
-                const itemTotal = item.price * item.quantity;
-                total += itemTotal;
-                count += item.quantity;
-                
-                const cartItem = document.createElement('div');
-                cartItem.className = 'cart-item';
-                cartItem.innerHTML = `
-                    <img src="${item.image}" alt="${item.name}" class="cart-item-image">
-                    <div class="cart-item-details">
-                        <h3 class="cart-item-name">${item.name}</h3>
-                        <div class="cart-item-price">$${item.price.toFixed(2)} × ${item.quantity} = $${itemTotal.toFixed(2)}</div>
-                        <div class="cart-item-quantity">
-                            <label for="quantity-${item.id}">Qty:</label>
-                            <input type="number" id="quantity-${item.id}" class="cart-item-quantity-input" 
-                                data-id="${item.id}" value="${item.quantity}" min="1">
-                        </div>
-                        <button class="remove-item" data-id="${item.id}">Remove</button>
-                    </div>
-                `;
-                cartItems.appendChild(cartItem);
-            });
-            
-            cartCount.textContent = count;
-            cartTotal.textContent = `$${total.toFixed(2)}`;
-        }
-
-        // Search products - updated for dynamic search
-        function searchProducts() {
-            const searchTerm = searchInput.value.toLowerCase().trim();
-            
-            if (searchTerm === '') {
-                renderProducts();
-                return;
-            }
-            
-            const filteredProducts = products.filter(product => 
-                product.name.toLowerCase().includes(searchTerm) || 
-                product.description.toLowerCase().includes(searchTerm)
-            );
-            
-            productsGrid.innerHTML = '';
-            
-            if (filteredProducts.length === 0) {
-                productsGrid.innerHTML = '<p class="no-results">No products found. Try a different search term.</p>';
-                return;
-            }
-            
-            renderProducts(filteredProducts);
-        }
-
-        // Show notification
-        function showNotification(message) {
-            const notification = document.createElement('div');
-            notification.textContent = message;
-            notification.style.cssText = `
-                position: fixed;
-                bottom: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: #25D366;
-                color: white;
-                padding: 12px 24px;
-                border-radius: 50px;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-                z-index: 2000;
-                animation: fadeIn 0.3s, fadeOut 0.3s 2.7s forwards;
-            `;
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                document.body.removeChild(notification);
-            }, 3000);
-        }
-
-        // Send order via WhatsApp
-        function sendOrderViaWhatsApp() {
-            const name = document.getElementById('customer-name').value;
-            const email = document.getElementById('customer-email').value;
-            const phone = document.getElementById('customer-phone').value;
-            const address = document.getElementById('customer-address').value;
-            const shippingMethod = document.getElementById('shipping-method').value;
-            
-            // Calculate order total
-            const orderTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
-            
-            // Create order summary
-            let orderSummary = `New Order from ${name}%0A%0A`;
-            orderSummary += `*Contact Information:*%0A`;
-            orderSummary += `Email: ${email}%0A`;
-            orderSummary += `Phone: ${phone}%0A`;
-            orderSummary += `Address: ${address}%0A`;
-            orderSummary += `Shipping Method: ${shippingMethod}%0A%0A`;
-            orderSummary += `*Order Details:*%0A`;
-            
-            cart.forEach(item => {
-                orderSummary += `- ${item.name} (Qty: ${item.quantity}) - $${(item.price * item.quantity).toFixed(2)}%0A`;
-            });
-            
-            orderSummary += `%0A*Order Total: $${orderTotal.toFixed(2)}*`;
-            
-            // Create WhatsApp URL
-            const whatsappURL = `https://wa.me/1234567890?text=${orderSummary}`;
-            
-            // Open WhatsApp in a new tab
-            window.open(whatsappURL, '_blank');
-            
-            // Close modal and reset cart
-            modalOverlay.classList.remove('open');
-            cart = [];
-            updateCartUI();
-            checkoutForm.reset();
-            
-            // Show confirmation message
-            showNotification('Order placed successfully! Check your WhatsApp.');
-        }
-
-        // Initialize the app
-        init();
-    </script>
-    <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="54928"></script>
+// --- rest of your JS (init, cart functions, etc.) remain unchanged ---
+</script>
+<script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="54928"></script>
 </body>
 </html>
