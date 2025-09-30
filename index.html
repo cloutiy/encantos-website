@@ -523,31 +523,29 @@
         }
 
         // Render products to the page
-        function renderProducts(productsToRender = products) {
-    productsGrid.innerHTML = '';
-    
-    productsToRender.forEach(product => {
-        const productCard = document.createElement('div');
-        productCard.className = 'product-card';
-        productCard.innerHTML = `
-            <div class="product-image-container">
-                <img src="${product.image}" alt="${product.name}" class="product-image">
-            </div>
-            <div class="product-info">
-                <h3 class="product-name">${product.name}</h3>
-                <p class="product-description">${product.description}</p>
-                <div class="product-price">S/${product.price.toFixed(2)}</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn decrease" data-id="${product.id}">-</button>
-                    <input type="number" class="quantity-input" data-id="${product.id}" value="1" min="1">
-                    <button class="quantity-btn increase" data-id="${product.id}">+</button>
-                </div>
-                <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
-            </div>
-        `;
-        productsGrid.appendChild(productCard);
-    });
-}
+       function renderProducts(productsToRender = products) {
+            productsGrid.innerHTML = '';
+            
+            productsToRender.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-price">S/${product.price.toFixed(2)}</div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn decrease" data-id="${product.id}">-</button>
+                            <input type="number" class="quantity-input" data-id="${product.id}" value="1" min="1">
+                            <button class="quantity-btn increase" data-id="${product.id}">+</button>
+                        </div>
+                        <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
+                    </div>
+                `;
+                productsGrid.appendChild(productCard);
+            });
+        }
 
         // Set up event listeners
         function setupEventListeners() {
