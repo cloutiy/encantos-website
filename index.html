@@ -815,16 +815,17 @@ function sendOrderToN8n() {
             const orderTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
             
             // Create order summary
-            let orderSummary = `Nuevo pedido: ${name}%0A%0A`;
+            let orderSummary = `*Nuevo pedido*: ${name}%0A%0A`;
             orderSummary += `*Datos de envio:*%0A`;
-            orderSummary += `Correo: ${email}%0A`;
-            orderSummary += `Cel: ${phone}%0A`;
-            orderSummary += `Direccion: ${address}%0A`;
-            orderSummary += `Método de envío: ${shippingMethod}%0A%0A`;
+            orderSummary += `*Correo:* ${email}%0A`;
+            orderSummary += `*Cel:* ${phone}%0A`;
+            orderSummary += `*Direccion:* ${address}%0A`;
+            orderSummary += `*Método de envío:* ${shippingMethod}%0A%0A`;
             orderSummary += `*Carrito:*%0A`;
             
             cart.forEach(item => {
-                orderSummary += `- ${item.name} (Qty: ${item.quantity}) - S/${(item.price * item.quantity).toFixed(2)}%0A`;
+                //orderSummary += `- ${item.name} (Qty: ${item.quantity}) - S/${(item.price * item.quantity).toFixed(2)}%0A`;
+                orderSummary += `- ${item.quantity} x ${item.name} = S/${(item.price * item.quantity).toFixed(2)}%0A`;
             });
             
             orderSummary += `%0A*Total: S/${orderTotal.toFixed(2)}*`;
