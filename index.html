@@ -676,7 +676,7 @@
             cartItems.innerHTML = '';
             
             if (cart.length === 0) {
-                cartItems.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
+                cartItems.innerHTML = '<p class="empty-cart">Tu carrito está vacío</p>';
                 cartCount.textContent = '0';
                 cartTotal.textContent = '$0.00';
                 return;
@@ -698,11 +698,11 @@
                         <h3 class="cart-item-name">${item.name}</h3>
                         <div class="cart-item-price">S/${item.price.toFixed(2)} × ${item.quantity} = S/${itemTotal.toFixed(2)}</div>
                         <div class="cart-item-quantity">
-                            <label for="quantity-${item.id}">Qtd:</label>
+                            <label for="quantity-${item.id}">Quant::</label>
                             <input type="number" id="quantity-${item.id}" class="cart-item-quantity-input" 
                                 data-id="${item.id}" value="${item.quantity}" min="1">
                         </div>
-                        <button class="remove-item" data-id="${item.id}">Remove</button>
+                        <button class="remove-item" data-id="${item.id}">Eliminar</button>
                     </div>
                 `;
                 cartItems.appendChild(cartItem);
@@ -729,7 +729,7 @@
             productsGrid.innerHTML = '';
             
             if (filteredProducts.length === 0) {
-                productsGrid.innerHTML = '<p class="no-results">No products found. Try a different search term.</p>';
+                productsGrid.innerHTML = '<p class="no-results">No se encuentra este producto. Intenta otro.</p>';
                 return;
             }
             
@@ -750,7 +750,7 @@
                 padding: 12px 24px;
                 border-radius: 50px;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-                z-index: 2000;
+                z-index: 9999;
                 animation: fadeIn 0.3s, fadeOut 0.3s 2.7s forwards;
             `;
             
@@ -815,22 +815,22 @@ function sendOrderToN8n() {
             const orderTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
             
             // Create order summary
-            let orderSummary = `New Order from ${name}%0A%0A`;
-            orderSummary += `*Contact Information:*%0A`;
-            orderSummary += `Email: ${email}%0A`;
-            orderSummary += `Phone: ${phone}%0A`;
-            orderSummary += `Address: ${address}%0A`;
-            orderSummary += `Shipping Method: ${shippingMethod}%0A%0A`;
-            orderSummary += `*Order Details:*%0A`;
+            let orderSummary = `Nuevo pedido: ${name}%0A%0A`;
+            orderSummary += `*Datos de envio:*%0A`;
+            orderSummary += `Correo: ${email}%0A`;
+            orderSummary += `Cel: ${phone}%0A`;
+            orderSummary += `Direccion: ${address}%0A`;
+            orderSummary += `Método de envío: ${shippingMethod}%0A%0A`;
+            orderSummary += `*Carrito:*%0A`;
             
             cart.forEach(item => {
                 orderSummary += `- ${item.name} (Qty: ${item.quantity}) - S/${(item.price * item.quantity).toFixed(2)}%0A`;
             });
             
-            orderSummary += `%0A*Order Total: S/${orderTotal.toFixed(2)}*`;
+            orderSummary += `%0A*Total: S/${orderTotal.toFixed(2)}*`;
             
             // Create WhatsApp URL
-            const whatsappURL = `https://wa.me/1234567890?text=${orderSummary}`;
+            const whatsappURL = `https://wa.me/51935187862?text=${orderSummary}`;
             
             // Open WhatsApp in a new tab
             window.open(whatsappURL, '_blank');
@@ -842,12 +842,11 @@ function sendOrderToN8n() {
             checkoutForm.reset();
             
             // Show confirmation message
-            showNotification('Order placed successfully! Check your WhatsApp.');
+            showNotification('Tu pedido fue enviado! Ver a tu WhatsApp.');
         }
 
         // Initialize the app
         init();
     </script>
-    <!-- <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="54928"></script> -->
 </body>
 </html>
