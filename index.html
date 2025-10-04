@@ -816,7 +816,8 @@ function sendOrderToN8n() {
             
             // Create order summary
             let orderSummary = `*Nuevo pedido*: ${name}%0A%0A`;
-            orderSummary += `*Datos de envio:*%0A`;
+            //orderSummary += `*Datos de envio:*%0A`;
+            orderSummary += `*DNI:* ${dni}%0A`;
             orderSummary += `*Correo:* ${email}%0A`;
             orderSummary += `*Cel:* ${phone}%0A`;
             orderSummary += `*Direccion:* ${address}%0A`;
