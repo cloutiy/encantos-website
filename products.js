@@ -1,5 +1,13 @@
 const productData = [
   {
+    "name": "Pasta dental sin flúor  de menta + eucalipto (60gr)",
+    "description": "Pasta dental vegana con carbonato de calcio, muña, sábila y betaina de coco. Tiene propiedades antiinflamatorias y antibacteriales. Limpia profundamente, elimina placa, previene caries y fortalece dientes y encías. Libre de flúor, parabenos, apta para veganos, celiacos, niños y adultos.",
+    "image": "",
+    "price": 0,
+    "catalog_id": 44,
+    "ingredients": "Carbonato de calcio, muña, sábila, betaina de coco, infución de muña infusión de anís, SCI, aceite esencial de eucalipto y menta, glicerina, aceite de ajonjolí."
+  },
+  {
     "name": "Aceite de aguaje (30ml)",
     "description": "Aceite nutritivo de aguaje, rico en beta-carotenos. Protege la piel del envejecimiento prematuro, ayuda a regenerar estrías y cicatrices, y aclara manchas. Un antioxidante natural que protege de los radicales libres y los rayos UV.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/Q4PyL",
@@ -342,14 +350,6 @@ const productData = [
     "price": 30,
     "catalog_id": 43,
     "ingredients": ""
-  },
-  {
-    "name": "Pasta dental sin flúor  de menta + eucalipto (60gr)",
-    "description": "Pasta dental vegana con carbonato de calcio, muña, sábila y betaina de coco. Tiene propiedades antiinflamatorias y antibacteriales. Limpia profundamente, elimina placa, previene caries y fortalece dientes y encías. Libre de flúor, parabenos, apta para veganos, celiacos, niños y adultos.",
-    "image": "",
-    "price": 0,
-    "catalog_id": 44,
-    "ingredients": "Carbonato de calcio, muña, sábila, betaina de coco, infución de muña infusión de anís, SCI, aceite esencial de eucalipto y menta, glicerina, aceite de ajonjolí."
   },
   {
     "name": "Roll on analgesico con CBD (10gr)",
