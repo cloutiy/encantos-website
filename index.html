@@ -236,6 +236,8 @@ function generateOrderNumber() {
 
             // Form submission
             checkoutForm.addEventListener('submit', (e) => {
+                e.preventDefault(); // ← stops form from reloading page
+                
                 // Generate order number
                   const orderNumber = generateOrderNumber();
     
@@ -243,7 +245,7 @@ function generateOrderNumber() {
                 sendOrderViaWhatsApp(orderNumber);
     
                 // Send to n8n backend for processing
-                //sendOrderToN8n(orderNumber);
+                sendOrderToN8n(orderNumber);
             });
 
             // Search functionality - updated for dynamic search
