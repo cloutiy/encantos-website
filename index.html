@@ -1,21 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encantos de la selva - Online Store</title>
+    <title>Encantos de la selva - Tienda Online</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="encantos.css">
     <script src="products.js"></script>
     <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="54928"></script>
-    
-    
-    
-    
-    
-    
-    
-    
 </head>
 <body>
     <!-- Header with Hero Section -->
@@ -35,13 +27,13 @@
     <div class="search-container">
         <div class="search-bar">
             <input type="text" id="search-input" placeholder="Buscar productos...">
-            <button id="search-btn"><i class="fas fa-search"></i> Buscar </button>
+            <button id="search-btn"><i class="fas fa-search"></i> Buscar</button>
         </div>
     </div>
 
     <!-- Products Grid -->
     <div class="products-container">
-        <h2 class="section-title">Nuestra coleccion </h2>
+        <h2 class="section-title">Nuestra colección</h2>
         <div class="products-grid" id="products-grid">
             <!-- Products will be dynamically inserted here -->
         </div>
@@ -67,7 +59,7 @@
                 <span>Total:</span>
                 <span id="cart-total">S/0.00</span>
             </div>
-            <button class="checkout-btn" id="checkout-btn">Proceder a detailes del envio</button>
+            <button class="checkout-btn" id="checkout-btn">Proceder a detalles del envío</button>
         </div>
     </div>
 
@@ -76,7 +68,7 @@
         <div class="checkout-modal">
             <div class="modal-header">
                 <h2 class="modal-title">Completa tu pedido</h2>
-                <p class="modal-subtitle">A donde envamos este pedido?</p>
+                <p class="modal-subtitle">¿A dónde enviamos este pedido?</p>
             </div>
             <form id="checkout-form">
                 <div class="form-group">
@@ -102,7 +94,7 @@
                 <div class="form-group">
                     <label for="shipping-method">Método de envío</label>
                     <select id="shipping-method" required>
-                        <option value="">Eligir metodo de envio</option>
+                        <option value="">Elegir método de envío</option>
                         <option value="Shalom">Shalom (oficina)</option>
                         <option value="Olva (domicilio)">Olva (domicilio)</option>
                         <option value="Olva (oficina)">Olva (oficina)</option>
@@ -111,22 +103,20 @@
                 </div>
                 <div class="modal-actions">
                     <button type="button" class="cancel-btn" id="cancel-order">Cancelar</button>
-                  <button type="submit" class="submit-order">
-  <i class="fas fa-paper-plane"></i> Enviar
-</button>
-
+                    <button type="submit" class="submit-order">
+                        <i class="fas fa-paper-plane"></i> Enviar Pedido
+                    </button>
                 </div>
             </form>
         </div>
     </div>
 
-  <script>
-
-      let products = productData.map(product => ({
-    ...product,
-    id: product.catalog_id
-}));
-  
+    <script>
+        // Initialize products from external data
+        let products = productData.map(product => ({
+            ...product,
+            id: product.catalog_id
+        }));
 
         // DOM Elements
         const productsGrid = document.getElementById('products-grid');
@@ -145,44 +135,23 @@
 
         // Cart state
         let cart = [];
-        
-        
-        // Load products from external JSON file
-async function loadProducts() {
-    try {
-        const response = await fetch('products.json');
-        if (!response.ok) {
-            throw new Error('Failed to load products');
-        }
-        products = await response.json();
-        console.log(`Loaded ${products.length} products`);
-    } catch (error) {
-        console.error('Error loading products:', error);
-        alert('Error al cargar productos. Por favor recarga la página.');
-    }
-}
-        
-        
-        
 
         // Initialize the page
-        async function init() {
-    //await loadProducts();
-    renderProducts();
-    updateCartUI();
-    setupEventListeners();
-}
-        
-        
+        function init() {
+            renderProducts();
+            updateCartUI();
+            setupEventListeners();
+        }
+
         // Generate unique order number
-function generateOrderNumber() {
-    const timestamp = Date.now().toString().slice(-6); // Last 6 digits of timestamp
-    const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0'); // 3 random digits
-    return `ORD-${timestamp}${random}`;
-}
+        function generateOrderNumber() {
+            const timestamp = Date.now().toString().slice(-6);
+            const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+            return `ORD-${timestamp}${random}`;
+        }
 
         // Render products to the page
-      function renderProducts(productsToRender = products) {
+        function renderProducts(productsToRender = products) {
             productsGrid.innerHTML = '';
             
             productsToRender.forEach(product => {
@@ -193,10 +162,7 @@ function generateOrderNumber() {
                     <div class="product-info">
                         <h3 class="product-name">${product.name}</h3>
                         <p class="product-description">${product.description}</p>
-                        
                         <p class="product-description"><b>Ingredientes: </b>${product.ingredients}</p>
-                        
-                        
                         <div class="product-price">S/${product.price.toFixed(2)}</div>
                         <div class="quantity-controls">
                             <button class="quantity-btn decrease" data-id="${product.id}">-</button>
@@ -224,7 +190,7 @@ function generateOrderNumber() {
             // Checkout process
             checkoutBtn.addEventListener('click', () => {
                 if (cart.length === 0) {
-                    alert('Your cart is empty. Add some products first!');
+                    alert('Tu carrito está vacío. ¡Añade algunos productos primero!');
                     return;
                 }
                 modalOverlay.classList.add('open');
@@ -234,21 +200,39 @@ function generateOrderNumber() {
                 modalOverlay.classList.remove('open');
             });
 
-            // Form submission
-            checkoutForm.addEventListener('submit', (e) => {
-                e.preventDefault(); // ← stops form from reloading page
+            // Form submission - IMPROVED FLOW
+            checkoutForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
                 
-                // Generate order number
-                  const orderNumber = generateOrderNumber();
-    
-                // Send to WhatsApp (opens in new window)
-                sendOrderViaWhatsApp(orderNumber);
-    
-                // Send to n8n backend for processing
-                sendOrderToN8n(orderNumber);
+                // Disable submit button to prevent multiple submissions
+                const submitBtn = checkoutForm.querySelector('.submit-order');
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Procesando...';
+                
+                try {
+                    // Generate order number
+                    const orderNumber = generateOrderNumber();
+                    
+                    // Send to n8n backend FIRST
+                    await sendOrderToN8n(orderNumber);
+                    
+                    // Then send to WhatsApp
+                    sendOrderViaWhatsApp(orderNumber);
+                    
+                    // Reset UI only after both operations complete
+                    resetCheckoutUI();
+                    
+                } catch (error) {
+                    console.error('Error processing order:', error);
+                    alert('Error al procesar el pedido. Por favor intenta nuevamente.');
+                } finally {
+                    // Re-enable submit button
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Pedido';
+                }
             });
 
-            // Search functionality - updated for dynamic search
+            // Search functionality
             searchInput.addEventListener('input', searchProducts);
             searchBtn.addEventListener('click', searchProducts);
 
@@ -348,7 +332,7 @@ function generateOrderNumber() {
             if (cart.length === 0) {
                 cartItems.innerHTML = '<p class="empty-cart">Tu carrito está vacío</p>';
                 cartCount.textContent = '0';
-                cartTotal.textContent = '$0.00';
+                cartTotal.textContent = 'S/0.00';
                 return;
             }
             
@@ -382,7 +366,7 @@ function generateOrderNumber() {
             cartTotal.textContent = `S/${total.toFixed(2)}`;
         }
 
-        // Search products - updated for dynamic search
+        // Search products
         function searchProducts() {
             const searchTerm = searchInput.value.toLowerCase().trim();
             
@@ -405,11 +389,6 @@ function generateOrderNumber() {
             
             renderProducts(filteredProducts);
         }
-        
-        
-        
-        
-        
 
         // Show notification
         function showNotification(message) {
@@ -432,53 +411,56 @@ function generateOrderNumber() {
             document.body.appendChild(notification);
             
             setTimeout(() => {
-                document.body.removeChild(notification);
+                if (notification.parentNode) {
+                    document.body.removeChild(notification);
+                }
             }, 3000);
         }
 
-        // Send order to n8n webhook
-function sendOrderToN8n(orderNumber) {
-    const name = document.getElementById('customer-name').value;
-    const email = document.getElementById('customer-email').value;
-    const phone = document.getElementById('customer-phone').value;
-    const address = document.getElementById('customer-address').value;
-    const shippingMethod = document.getElementById('shipping-method').value;
-    const dni = document.getElementById('customer-dni').value;
+        // Send order to n8n webhook - IMPROVED
+        async function sendOrderToN8n(orderNumber) {
+            const name = document.getElementById('customer-name').value;
+            const email = document.getElementById('customer-email').value;
+            const phone = document.getElementById('customer-phone').value;
+            const address = document.getElementById('customer-address').value;
+            const shippingMethod = document.getElementById('shipping-method').value;
+            const dni = document.getElementById('customer-dni').value;
 
-    // Calculate order total
-    const orderTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+            // Calculate order total
+            const orderTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
 
-    // Build order data
-    const orderData = {
-    orderNumber: orderNumber,
-  customer: { name, email, phone, address, shippingMethod, dni }, cart, total: orderTotal
-    };
+            // Build order data - using spread operator to create a copy of cart
+            const orderData = {
+                orderNumber: orderNumber,
+                customer: { 
+                    name, 
+                    email, 
+                    phone, 
+                    address, 
+                    shippingMethod, 
+                    dni 
+                },
+                cart: [...cart], // Important: Create a copy to prevent clearing issues
+                total: orderTotal
+            };
 
-    // Send to n8n webhook
-    fetch("https://encantos-automations-n8n.qsirhi.easypanel.host/webhook-test/order", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(orderData)
-    })
-    .then(async response => {
-    if (!response.ok) {
-        throw new Error("Order submission failed");
-    }
-    const html = await response.text();   // get HTML returned by n8n
-    document.open();
-    document.write(html);                 // replace current page with thank-you page
-    document.close();
-})
-.catch(error => {
-    console.error("Error:", error);
-    alert("Network error. Please try again.");
-});
-}
+            console.log('Sending order to n8n:', orderData); // Debug log
 
-        
-        
+            const response = await fetch("https://encantos-automations-n8n.qsirhi.easypanel.host/webhook-test/order", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(orderData)
+            });
+
+            if (!response.ok) {
+                throw new Error("Order submission failed");
+            }
+
+            return await response.text();
+        }
+
         // Send order via WhatsApp
         function sendOrderViaWhatsApp(orderNumber) {
             const name = document.getElementById('customer-name').value;
@@ -493,16 +475,15 @@ function sendOrderToN8n(orderNumber) {
             
             // Create order summary
             let orderSummary = `*Nuevo pedido: ${orderNumber}*%0A%0A`;
-            orderSummary += `*Cliente:* ${name}%0A`;;
+            orderSummary += `*Cliente:* ${name}%0A`;
             orderSummary += `*DNI:* ${dni}%0A`;
             orderSummary += `*Correo:* ${email}%0A`;
             orderSummary += `*Cel:* ${phone}%0A`;
-            orderSummary += `*Direccion:* ${address}%0A`;
+            orderSummary += `*Dirección:* ${address}%0A`;
             orderSummary += `*Método de envío:* ${shippingMethod}%0A%0A`;
             orderSummary += `*Carrito:*%0A`;
             
             cart.forEach(item => {
-                //orderSummary += `- ${item.name} (Qty: ${item.quantity}) - S/${(item.price * item.quantity).toFixed(2)}%0A`;
                 orderSummary += `- ${item.quantity} x ${item.name} = S/${(item.price * item.quantity).toFixed(2)}%0A`;
             });
             
@@ -513,15 +494,25 @@ function sendOrderToN8n(orderNumber) {
             
             // Open WhatsApp in a new tab
             window.open(whatsappURL, '_blank');
-            
-            // Close modal and reset cart
+        }
+
+        // Reset checkout UI after successful order
+        function resetCheckoutUI() {
+            // Close modal
             modalOverlay.classList.remove('open');
+            
+            // Clear cart
             cart = [];
             updateCartUI();
+            
+            // Reset form
             checkoutForm.reset();
             
-            // Show confirmation message
-            showNotification('Tu pedido fue enviado! Ver a tu WhatsApp.');
+            // Close cart sidebar
+            cartSidebar.classList.remove('open');
+            
+            // Show success notification
+            showNotification('¡Tu pedido fue enviado! Revisa tu WhatsApp.');
         }
 
         // Initialize the app
