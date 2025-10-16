@@ -344,10 +344,10 @@ const productData = [
     "ingredients": "Carbonato de calcio, muña, sábila, betaina de coco, infución de muña infusión de anís, SCI, aceite esencial de clavo de olor, canela y menta, glicerina, aceite de ajonjolí."
   },
   {
-    "name": "Pasta dental sin flúor  de menta + eucalipto (60gr)",
+    "name": "Pasta dental sin flúor  de menta + eucalipto (100gr)",
     "description": "Pasta dental vegana con carbonato de calcio, muña, sábila y betaina de coco. Tiene propiedades antiinflamatorias y antibacteriales. Limpia profundamente, elimina placa, previene caries y fortalece dientes y encías. Libre de flúor, parabenos, apta para veganos, celiacos, niños y adultos.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/8PG3u",
-    "price": 0,
+    "price": 30,
     "catalog_id": 44,
     "ingredients": "Carbonato de calcio, muña, sábila, betaina de coco, infución de muña infusión de anís, SCI, aceite esencial de eucalipto y menta, glicerina, aceite de ajonjolí."
   },
