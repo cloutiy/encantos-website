@@ -74,7 +74,7 @@ const productData = [
   {
     "name": "Bloqueador solar (100ml)",
     "description": "Fotoprotector solar natural FPS 50. Forma una pantalla bloqueadora que protege contra los rayos UVB. Resistente al agua, apto para piel sensible y grasa. Aplicar 10 minutos antes de la exposición al sol.",
-    "image": "",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/CtSQF",
     "price": 70,
     "catalog_id": 10,
     "ingredients": "Aceite de aguaje, aceite de coco, aceite de ajonjoli, aceite de zanahoria, manteca de karite, sábila, oxido de zinc, vainilla."
@@ -82,7 +82,7 @@ const productData = [
   {
     "name": "Bloqueador solar (30ml)",
     "description": "Tamaño práctico de nuestro fotoprotector solar natural FPS 50. Ideal para llevar a todas partes. Protección de amplio espectro, resistente al agua y apto para todo tipo de piel.",
-    "image": "",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/GSdtB",
     "price": 25,
     "catalog_id": 11,
     "ingredients": "Aceite de aguaje, aceite de coco, aceite de ajonjoli, aceite de zanahoria, manteca de karite, sábila, oxido de zinc, vainilla."
@@ -138,7 +138,7 @@ const productData = [
   {
     "name": "Jabón de cannabis y manzanilla (100gr)",
     "description": "Jabón antibacteriano y antiinflamatorio con cannabis y manzanilla. Ayuda a cicatrizar el acné, calma la comezón y las quemaduras solares. Relajante y emoliente, con un aroma fresco. Apto para piel mixta.",
-    "image": "",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/8LiEs",
     "price": 13,
     "catalog_id": 18,
     "ingredients": "Glicerina, aloe vera, manteca de cacao, aceite de manzanilla, aceite de cannabis."
@@ -146,7 +146,7 @@ const productData = [
   {
     "name": "Jabón de carbon activado (100gr)",
     "description": "Jabón antibacteriano ideal para el acné. Limpia profundamente, equilibra la grasa, elimina toxinas e impurezas. Actúa como un exfoliante suave gracias al carbón activado.",
-    "image": "",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/OIZAS",
     "price": 10,
     "catalog_id": 19,
     "ingredients": "Glicerina, polvo de carbon activado."
@@ -202,7 +202,7 @@ const productData = [
   {
     "name": "Jabón exfoliante de cafe (100gr)",
     "description": "Jabón exfoliante con café, aceite de coco, manteca de cacao y aceite de pepas de uvas. Activa la circulación y ayuda a reducir la celulitis. La cafeína ayuda a eliminar toxinas y grasas, dejando la piel más tersa.",
-    "image": "",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/XayUV",
     "price": 10,
     "catalog_id": 26,
     "ingredients": "Glicerina, café, aceite de coco, \nmanteca de cacao,\naceite de pepas de uva."
@@ -346,7 +346,7 @@ const productData = [
   {
     "name": "Pasta dental sin flúor  de menta + eucalipto (60gr)",
     "description": "Pasta dental vegana con carbonato de calcio, muña, sábila y betaina de coco. Tiene propiedades antiinflamatorias y antibacteriales. Limpia profundamente, elimina placa, previene caries y fortalece dientes y encías. Libre de flúor, parabenos, apta para veganos, celiacos, niños y adultos.",
-    "image": "",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/8PG3u",
     "price": 0,
     "catalog_id": 44,
     "ingredients": "Carbonato de calcio, muña, sábila, betaina de coco, infución de muña infusión de anís, SCI, aceite esencial de eucalipto y menta, glicerina, aceite de ajonjolí."
@@ -378,7 +378,7 @@ const productData = [
   {
     "name": "Shampoo botanico liquido (250ml)",
     "description": "",
-    "image": "",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/x4y89",
     "price": 47,
     "catalog_id": 48,
     "ingredients": "Agua destilada, SCI, glycerina liquida, goma xanthan, betaina de coco, aceites de ungurahui, sacha inchi, ricino y coco, aceites esenciales de romero, menta, lavanda, y hierba luisa, extracto de jengibre conservante natural."
@@ -426,7 +426,7 @@ const productData = [
   {
     "name": "Unguento de espirulina (50gr)",
     "description": "Ungüento nutritivo de espirulina para tratar y rejuvenecer la piel. Aporta flexibilidad, suavidad y elasticidad, ayudando a luchar contra el envejecimiento prematuro. Protege contra la radiación UV y es antiinflamatorio.",
-    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/AqRXfhttps://encantos-automations-droppy.qsirhi.easypanel.host/$/AqRXf",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/AqRXf",
     "price": 50,
     "catalog_id": 54,
     "ingredients": "Cera de abejas, aloe vera, aceite de sacha inchi, aceite de ungurahui, espirulina."
