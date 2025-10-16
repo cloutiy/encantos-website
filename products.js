@@ -314,7 +314,7 @@ const productData = [
   {
     "name": "Orquídea cream antiedad (50gr)",
     "description": "Tratamiento anti-edad de lujo con aloe vera, manteca de cacao, aceite de aguaje, aceite de pepas de uvas, polen de abejas y extracto de orquídeas. Antioxidante, retrasa el envejecimiento, regula la pigmentación y nutre la piel con minerales. Deja la piel suave, luminosa y libre de impurezas.",
-    "image": "",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/RejBR",
     "price": 45,
     "catalog_id": 40,
     "ingredients": "Aloe vera, manteca de cacao, \naceite de aguaje, aceite de \npepas de uvas, aceite de coco, \nextracto de orquideas, emulsificante, agua destilada, aceite esencial de lavanda."
