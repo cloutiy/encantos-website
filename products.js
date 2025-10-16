@@ -98,7 +98,7 @@ const productData = [
   {
     "name": "Crema nutritiva de aguaje (50gr)",
     "description": "Tratamiento antiestrías de uso nocturno. Regenera la piel, aclara manchas y calma irritaciones. Su alto contenido de antioxidantes y beta-carotenos protege del envejecimiento prematuro y de los rayos UV. Ayuda a producir colágeno para una piel más elástica.",
-    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/57Edf",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/DHlOq",
     "price": 45,
     "catalog_id": 13,
     "ingredients": "Manteca de cacao, agua destilada, aceite de aguaje amazónica, aceite de coco, emulsificante natural."
@@ -224,7 +224,7 @@ const productData = [
     "ingredients": "Glicerina, arnica, cacao,\naceite de copaiba, aceite \nde oliva, sangre de grado."
   },
   {
-    "name": "Labial (cattleya fucsia)",
+    "name": "Lipstick multiuso (cattleya fucsia)",
     "description": "Pinta tus labios al máximo con este vibrante color fucsia. Labial nutritivo e hidratante formulado con manteca de cacao, aceite de coco, cera de abejas, polen, miel y pigmentos minerales. Es comestible, de aroma dulce, y se puede usar como rubor o sombra. Libre de químicos tóxicos. 5 gr.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/BQrSs",
     "price": 27,
@@ -232,7 +232,7 @@ const productData = [
     "ingredients": "Manteca de cacao, aceite de aguaje ,aceite de coco,cera candelilla,aceite esencial de lavanda, oxido de zinc, recina de sangre de grado, pigmentos vegetal y mineral."
   },
   {
-    "name": "Labial (coral pishcota)",
+    "name": "Lipstick multiuso (coral pishcota)",
     "description": "Un tono coral suave y natural para labios hidratados y con color. Elaborado con ingredientes naturales como manteca de cacao y cera de abeja. Es comestible, nutritivo y multifuncional (labial, rubor, sombra). Libre de químicos tóxicos. Presentación de 5 gr.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/TVa8x",
     "price": 27,
@@ -240,7 +240,7 @@ const productData = [
     "ingredients": "Manteca de cacao, aceite de aguaje ,aceite de coco,cera candelilla,aceite esencial de lavanda, oxido de zinc, recina de sangre de grado, pigmentos vegetal y mineral."
   },
   {
-    "name": "Labial (rojo moshaka)",
+    "name": "Lipstick multiuso (rojo moshaka)",
     "description": "Un rojo intenso y clásico para un look audaz. Labial hidratante formulado con manteca de cacao, aceite de coco, cera de abejas, polen, miel y pigmentos minerales. Nutre, hidrata y pinta tus labios sin químicos tóxicos. Presentación de 5 gr.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/wvASz",
     "price": 27,
@@ -384,22 +384,6 @@ const productData = [
     "ingredients": "Agua destilada, SCI, glycerina liquida, goma xanthan, betaina de coco, aceites de ungurahui, sacha inchi, ricino y coco, aceites esenciales de romero, menta, lavanda, y hierba luisa, extracto de jengibre conservante natural."
   },
   {
-    "name": "Stick herbal multifuncional (coral)",
-    "description": "Stick multifuncional en tono coral para dar color a labios y mejillas. Formulado con ingredientes naturales nutritivos.",
-    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/T5I4L",
-    "price": 27,
-    "catalog_id": 49,
-    "ingredients": "Manteca de cacao, aceite de açaí, extracto de orquídeas, cera de abejas, aceite esencial de lavanda, oxido de zinc, pigmentos naturales."
-  },
-  {
-    "name": "Stick herbal multifuncional (rojo)",
-    "description": "Stick multifuncional en tono rojo para un look vibrante en labios y mejillas. Formulado con ingredientes naturales nutritivos.",
-    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/zGLez",
-    "price": 27,
-    "catalog_id": 50,
-    "ingredients": "Manteca de cacao, aceite de açaí, extracto de orquídeas, cera de abejas, aceite esencial de lavanda, oxido de zinc, pigmentos naturales."
-  },
-  {
     "name": "Stick iluminador (dorado)",
     "description": "Stick iluminador en tono dorado para realzar los puntos altos del rostro.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/dG8mr",
@@ -434,7 +418,7 @@ const productData = [
   {
     "name": "Unguento nutritivo de aguaje (50gr)",
     "description": "Ungüento profundamente nutritivo con aguaje para pieles secas o dañadas. Ayuda a regenerar estrías y cicatrices, aclara manchas y protege del envejecimiento prematuro.",
-    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/DHlOq",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/57Edf",
     "price": 45,
     "catalog_id": 55,
     "ingredients": "Cera de abeja, manteca de cacao, aceite de aguaje amazónica, aceite de jasmin."
