@@ -122,7 +122,7 @@ const productData = [
   {
     "name": "Desodorante en crema de carbón activado (85gr)",
     "description": "Desodorante natural con carbón activado para una purificación y control de olores superior. Neutraliza bacterias, es antiséptico y ayuda a quitar manchas. Libre de aluminio. Muy efectivo y no irritante.",
-    "image": "",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/5QybP",
     "price": 40,
     "catalog_id": 16,
     "ingredients": "Aceites esencial de lavanda y limón, aceite de coco, manteca de cacao, polen de abejas, ricinoleato de zinc, sábila, aceite de copaiba, carbón activado, emulsificante natural."
@@ -178,7 +178,7 @@ const productData = [
   {
     "name": "Jabón de maracuya (100gr)",
     "description": "Jabón hidratante y humectante con manteca de cacao, aceite de coco y aceite esencial de canela. Rico en Vitamina C, deja tu piel fresca, suave y renovada con un dulce aroma a frutas. Apto para todo tipo de piel.",
-    "image": "",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/5KMGn",
     "price": 10,
     "catalog_id": 23,
     "ingredients": "Glicerina, aceite de coco, manteca de cacao, aceite esencial de canela."
@@ -377,7 +377,7 @@ const productData = [
   },
   {
     "name": "Shampoo botanico liquido (250ml)",
-    "description": "",
+    "description": "Este shampoo limpia suavemente sin resecar, mientras nutre en profundidad con una poderosa mezcla de aceites amazónicos ricos en Omegas. Estimula el crecimiento, previene la caída y fortalece tanto el cuero cabelludo como las hebras desde la raíz. Hidrata, suaviza y controla el frizz, dejando el cabello manejable y con un brillo saludable.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/x4y89",
     "price": 47,
     "catalog_id": 48,
@@ -430,5 +430,13 @@ const productData = [
     "price": 45,
     "catalog_id": 56,
     "ingredients": "Aloe vera, manteca de cacao,\naceite de aguaje, aceite de \npepas de uvas, polen de abejas, extracto de orquideas, cera abejas."
+  },
+  {
+    "name": "Elixir capilar (30ml)",
+    "description": "Formula botánica con ortiga y romero para estimular el crecimiento, manzanilla para suavizar y aceites de sacha inchi, ungurahui y palta para hidratar profundamente. Los aceites esenciales de menta y romero activan la circulación, mientras la glicerina sella la humedad.",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/mJKx9",
+    "price": 50,
+    "catalog_id": 57,
+    "ingredients": "Infusión de manzanilla, extracto de ortiga, extracto de romero, glicerina, aceites de sacha inchi, ungurahui y palta, aceites esenciales de menta y romero, agua destilada, emulsificantes naturales."
   }
 ];
