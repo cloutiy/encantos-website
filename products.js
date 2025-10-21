@@ -10,7 +10,7 @@ const productData = [
   {
     "name": "Aceite de cannabis 10% (10ml)",
     "description": "Aceite de cannabis con una concentración del 10%, ideal para uso terapéutico y relajante.",
-    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/GiNsy",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/fXIrV",
     "price": 250,
     "catalog_id": 2,
     "ingredients": "Aceite de cannabis prensado en frio."
@@ -18,7 +18,7 @@ const productData = [
   {
     "name": "Aceite de cannabis 5% (10ml)",
     "description": "Aceite de cannabis con una concentración del 5%, perfecto para introducción y uso moderado.",
-    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/fXIrV",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/GiNsy",
     "price": 180,
     "catalog_id": 3,
     "ingredients": "Aceite de cannabis prensado en frio."
@@ -262,14 +262,6 @@ const productData = [
     "price": 40,
     "catalog_id": 33,
     "ingredients": "Agua destilada, espirulina, aloe vera, aceite de sacha inchi, aceite de girasol, emulsificante."
-  },
-  {
-    "name": "Locion de ungurahui (30ml)",
-    "description": "Loción nutritiva de ungurahui para restaurar la suavidad y elasticidad de la piel. Rica en ácidos grasos esenciales.",
-    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/9xGRB",
-    "price": 40,
-    "catalog_id": 34,
-    "ingredients": "Agua distilada, aceite de ungurahui, sábila, aceite virgen de girasol, emulsificante natural."
   },
   {
     "name": "Locion repelente (100ml)",
