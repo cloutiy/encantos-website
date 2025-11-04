@@ -60,7 +60,7 @@ const productData = [
     "price": 27,
     "catalog_id": 29,
     "ingredients": "Manteca de cacao, aceite de aguaje ,aceite de coco,cera candelilla,aceite esencial de lavanda, oxido de zinc, recina de sangre de grado, pigmentos vegetal y mineral.",
-    "display_order": 6
+    "display_order": 7
   },
   {
     "name": "Lipstick multiuso (coral pishcota)",
@@ -297,6 +297,15 @@ const productData = [
     "display_order": 32
   },
   {
+    "name": "Jabón para bebe y ninos (100gr)",
+    "description": "Jabón suave y sanador con leche de coco, manzanilla y miel de abeja. Ideal para piel delicada y sensible. Super relajante, mantiene la piel suave y protegida. Libre de químicos tóxicos y aluminio.",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/yzTqC",
+    "price": 20,
+    "catalog_id": 59,
+    "ingredients": "Glicerina, manzanilla, \nmiel de abeja, leche de coco.\n",
+    "display_order": 33
+  },
+  {
     "name": "Jabón para bebe y ninos (50gr)",
     "description": "Jabón suave y sanador con leche de coco, manzanilla y miel de abeja. Ideal para piel delicada y sensible. Super relajante, mantiene la piel suave y protegida. Libre de químicos tóxicos y aluminio.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/YaGP6",
@@ -484,5 +493,14 @@ const productData = [
     "catalog_id": 57,
     "ingredients": "Infusión de manzanilla, extracto de ortiga, extracto de romero, glicerina, aceites de sacha inchi, ungurahui y palta, aceites esenciales de menta y romero, agua destilada, emulsificantes naturales.",
     "display_order": 53
+  },
+  {
+    "name": "Loción antiacné \"lux selva pura\" (30ml)",
+    "description": "Formula botánica antiacné con acción reparadora a base de ingredientes botánicos. El aceite de sacha inchi y girasol nutre sin obstruir los poros, mientras el oleato y extracto de manzanilla calman la piel. La cúrcuma y la espirulina purifican, y la sangre de grado favorece la regeneración celular. Fórmula ligera con agua destilada y emulsificante natural.\nCombate granos e impurezas sin resecar, repara y regenera la piel dañada y calma rojeces e irritaciones.",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/BF9FU",
+    "price": 50,
+    "catalog_id": 58,
+    "ingredients": "Aceites de sacha inchi y girasol, oleato de manzanilla, extractos de cúrcuma, espirulina y manzanilla, sangre de grado, agua destilada, emulsificante natural.",
+    "display_order": 54
   }
 ];
