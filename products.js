@@ -297,7 +297,7 @@ const productData = [
     "display_order": 32
   },
   {
-    "name": "Jabón para bebe y ninos (100gr)",
+    "name": "Jabón para bebe y niño (100gr)",
     "description": "Jabón suave y sanador con leche de coco, manzanilla y miel de abeja. Ideal para piel delicada y sensible. Super relajante, mantiene la piel suave y protegida. Libre de químicos tóxicos y aluminio.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/yzTqC",
     "price": 20,
@@ -306,7 +306,7 @@ const productData = [
     "display_order": 33
   },
   {
-    "name": "Jabón para bebe y ninos (50gr)",
+    "name": "Jabón para bebe y niño (50gr)",
     "description": "Jabón suave y sanador con leche de coco, manzanilla y miel de abeja. Ideal para piel delicada y sensible. Super relajante, mantiene la piel suave y protegida. Libre de químicos tóxicos y aluminio.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/YaGP6",
     "price": 10,
@@ -351,7 +351,7 @@ const productData = [
     "display_order": 37
   },
   {
-    "name": "Mascara de pestanas (maron)",
+    "name": "Mascara de pestañas (maron)",
     "description": "Máscara de pestañas en color marrón para un look definido y natural.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/msC6B",
     "price": 27,
@@ -360,7 +360,7 @@ const productData = [
     "display_order": 38
   },
   {
-    "name": "Mascara de pestanas (negro)",
+    "name": "Mascara de pestañas (negro)",
     "description": "Máscara de pestañas en color negro clásico para un impacto dramático.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/RLJG5",
     "price": 27,
