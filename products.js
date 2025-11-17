@@ -1,5 +1,14 @@
 const productData = [
   {
+    "name": "Fotoprotector con color nude (30ml)",
+    "description": "Consigue una cobertura uniforme y un acabado natural con esta crema facial de rápida absorción que unifica el tono de tu piel, reduce imperfecciones y proporciona una protección ligera pero eficaz contra los rayos UVA y UVB, todo ello con una fórmula no grasa, apta para pieles sensibles y libre de parabenos y ftalatos.",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/shMEd",
+    "price": 50,
+    "catalog_id": 60,
+    "ingredients": "Agua destilada, emulsificante natural, oxido de zinc, aceite de aguaje, aceite de ungurahui, aceite de sacha inchi, glicerina vegetal, extracto botánico de manzanilla, sharomix, pigmento mineral, vitamina E (tocoferol), aceite esencial de jasmin, extracto de vainilla amazónica.",
+    "display_order": 1
+  },
+  {
     "name": "Bloqueador solar (100ml)",
     "description": "Fotoprotector solar natural FPS 50. Forma una pantalla bloqueadora que protege contra los rayos UVB. Resistente al agua, apto para piel sensible y grasa. Aplicar 10 minutos antes de la exposición al sol.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/CtSQF",
