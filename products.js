@@ -36,8 +36,8 @@ const productData = [
     "display_order": 3
   },
   {
-    "name": "Acondicionador en crema (250ml)",
-    "description": "Acondicionador en crema para un cabello suave, manejable y profundamente hidratado.",
+    "name": "Acondicionador Amazonico en crema (250ml)",
+    "description": "Acondicionador en crema para un cabello suave, manejable y profundamente hidratado. Ayuda a fortalecer la raiz y previene caida. Apto para todo tipo de cabellos.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/kUsgB",
     "price": 47,
     "catalog_id": 5,
@@ -63,8 +63,8 @@ const productData = [
     "display_order": 6
   },
   {
-    "name": "Lipstick multiuso (cattleya fucsia)",
-    "description": "Pinta tus labios al máximo con este vibrante color fucsia. Labial nutritivo e hidratante formulado con manteca de cacao, aceite de coco, cera de abejas, polen, miel y pigmentos minerales. Es comestible, de aroma dulce, y se puede usar como rubor o sombra. Libre de químicos tóxicos. 5 gr.",
+    "name": "Lipstick multiuso Botanico (cattleya fucsia) 10 gr",
+    "description": "Pinta tus labios al máximo con este vibrante color fucsia. Labial nutritivo e hidratante. Es comestible y organico, de aroma dulce, y se puede usar como rubor o sombra. Libre de químicos tóxicos. 5 gr.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/BQrSs",
     "price": 28,
     "catalog_id": 29,
@@ -72,8 +72,8 @@ const productData = [
     "display_order": 7
   },
   {
-    "name": "Lipstick multiuso (coral pishcota)",
-    "description": "Un tono coral suave y natural para labios hidratados y con color. Elaborado con ingredientes naturales como manteca de cacao y cera de abeja. Es comestible, nutritivo y multifuncional (labial, rubor, sombra). Libre de químicos tóxicos. Presentación de 5 gr.",
+    "name": "Lipstick multiuso Botanico (coral pishcota) 10 gr",
+    "description": "Un tono coral divertido para labios hidratados. Elaborado con ingredientes naturales organicos. Es comestible, nutritivo y multifuncional (labial, rubor, sombra). Libre de químicos tóxicos. Presentación de 5 gr.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/TVa8x",
     "price": 28,
     "catalog_id": 30,
@@ -81,8 +81,8 @@ const productData = [
     "display_order": 7
   },
   {
-    "name": "Lipstick multiuso (rojo moshaka)",
-    "description": "Un rojo intenso y clásico para un look audaz. Labial hidratante formulado con manteca de cacao, aceite de coco, cera de abejas, polen, miel y pigmentos minerales. Nutre, hidrata y pinta tus labios sin químicos tóxicos. Presentación de 5 gr.",
+    "name": "Lipstick multiuso Botanico (rojo moshaka) 10 gr",
+    "description": "Un rojo intenso apasionado para un look audaz. Labial organico que hidratan y Nutren, tus labios sin químicos tóxicos. Presentación de 5 gr.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/wvASz",
     "price": 28,
     "catalog_id": 31,
@@ -91,52 +91,52 @@ const productData = [
   },
   {
     "name": "Pack \"yuyito kids\"",
-    "description": "Pack especial para niños que incluye productos suaves y seguros para su cuidado diario.",
+    "description": "Pack especial para niños 4 productos suaves y seguros para el cuidado diario. DESODORANTE, PASTA DENTAL, BLOQUEADOR Y JABON DE BABY. Presentacion de 30 gramos cada productos y el jabon de 50 gr ",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/KhccL",
     "price": 55,
     "catalog_id": 41,
-    "ingredients": "",
+    "ingredients": "Los ingredientes naturales y organicos. libres de parabenos, Hipoalergenicos. Para el cuidado de bebes y niños de 2 años a 11 años.",
     "display_order": 9
   },
   {
     "name": "Aceite de aguaje (30ml)",
-    "description": "Aceite nutritivo de aguaje, rico en beta-carotenos. Protege la piel del envejecimiento prematuro, ayuda a regenerar estrías y cicatrices, y aclara manchas. Un antioxidante natural que protege de los radicales libres y los rayos UV.",
+    "description": "Aceite de aguaje virgen , rico en beta-carotenos. Protege la piel del envejecimiento prematuro, ayuda a regenerar estrías y cicatrices, Ayuda a aclarar manchas. Un antioxidante natural alto en Vit. A y E. que protege de los radicales libres y los rayos UV.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/Q4PyL",
     "price": 35,
     "catalog_id": 1,
-    "ingredients": "Aceite de agaje prensado en frio.",
+    "ingredients": "Aceite de aguaje virgen (prensado en frio)",
     "display_order": 10
   },
   {
-    "name": "Aceite de cannabis 10% (10ml)",
-    "description": "Aceite de cannabis con una concentración del 10%, ideal para uso terapéutico y relajante.",
+    "name": "CBD Aceite de cannabis 10% (10ml)",
+    "description": "CBD Aceite de cannabis puro con una concentración del 10%, ideal para uso terapéutico medicinal  y relajante  fuerte. ",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/fXIrV",
     "price": 250,
     "catalog_id": 2,
-    "ingredients": "Aceite de cannabis prensado en frio.",
+    "ingredients": "CBD Aceite de cannabis puro ",
     "display_order": 11
   },
   {
-    "name": "Aceite de cannabis 5% (10ml)",
-    "description": "Aceite de cannabis con una concentración del 5%, perfecto para introducción y uso moderado.",
+    "name": "CBD Aceite de cannabis 5% de (10 ml)",
+    "description": "CBD Aceite de cannabis puro con una concentración del 5%, perfecto para iniciar un tratamiento medicinal suave",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/GiNsy",
     "price": 180,
     "catalog_id": 3,
-    "ingredients": "Aceite de cannabis prensado en frio.",
+    "ingredients": "CBD Aceite de cannabis puro ",
     "display_order": 12
   },
   {
     "name": "Aceite de ungurahui (30ml)",
-    "description": "Aceite nutritivo de ungurahui, excelente para tratamientos capilares y cuidado de la piel. Rico en ácidos grasos esenciales, hidrata y regenera profundamente.",
+    "description": "Aceite virgen de una fruta exotica el Ungurahui, excelente para tratamientos capilares y cuidado de la piel. Rico en ácidos grasos esenciales y omegas. hidrata y regenera profundamente.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/7WjpW",
     "price": 35,
     "catalog_id": 4,
-    "ingredients": "Aceite de ungurahui prensado en frio.",
+    "ingredients": "Aceite de ungurahui Virgen",
     "display_order": 13
   },
   {
     "name": "Bálsamo labial de achiote y cochinilla",
-    "description": "Dale un color rojo natural a tus labios con este bálsamo nutritivo. Formulado con manteca de cacao, aceite de coco y aguaje para una hidratación profunda. Es comestible, con aroma a coco, y también funciona como rubor o sombra. Protege contra los rayos UV. Presentación de 5 gr.",
+    "description": "Dale un color rojo natural a tus labios con este bálsamo nutritivo. Es perfecto para climas extremos frio o calor Presentación de 5 gr.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/sfMMc",
     "price": 18,
     "catalog_id": 6,
@@ -165,14 +165,14 @@ const productData = [
     "name": "Bloqueador solar \"yuyito kids\" (30gr)",
     "description": "Protector solar seguro y suave, formulado específicamente para la piel sensible de los niños. FPS 50, resistente al agua y con ingredientes naturales.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/3164C",
-    "price": 15,
+    "price": 20,
     "catalog_id": 9,
     "ingredients": "Aceite de aguaje, aceite de coco, aceite de ajonjoli, aceite de zanahoria, manteca de karite, sábila, oxido de zinc, vainilla.\nUso de 2 a 11 años.",
     "display_order": 17
   },
   {
-    "name": "Crema de ungurahui y romero para cabello (50gr)",
-    "description": "Tratamiento para cabellos fuertes y saludables. Evita la caída, fortalece la raíz, combate la caspa y aporta humectación y brillo. Repara las fibras capilares, estimula el crecimiento y protege de la radiación UV. Apto para damas y caballeros. Se puede usar para peinar.",
+    "name": "Unguento puro con ungurahui y romero para cabello secos y maltratados (50gr)",
+    "description": "Tratamiento intenso para cabellos secos y maltratados. Ayuda a mantener tu cabello fuertes y saludables. Evita la caída, fortalece la raíz, combate la caspa y aporta humectación profunda y brillo. Repara las fibras capilares, estimula el crecimiento y protege de la radiación UV. Apto para damas y caballeros. Se puede usar para peinar.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/IpreD",
     "price": 45,
     "catalog_id": 12,
@@ -181,7 +181,7 @@ const productData = [
   },
   {
     "name": "Crema nutritiva de aguaje (50gr)",
-    "description": "Tratamiento antiestrías de uso nocturno. Regenera la piel, aclara manchas y calma irritaciones. Su alto contenido de antioxidantes y beta-carotenos protege del envejecimiento prematuro y de los rayos UV. Ayuda a producir colágeno para una piel más elástica.",
+    "description": "Humecta profundamente la piel Previene manchas y ayuda a unificar las manchas causadas por estres oxidativo. Su alto contenido de antioxidantes y beta-carotenos protege del envejecimiento prematuro y de los rayos UV. Ayuda a producir colágeno para una piel más elástica. Vit. A y Vit. E",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/DHlOq",
     "price": 45,
     "catalog_id": 13,
@@ -189,30 +189,30 @@ const productData = [
     "display_order": 19
   },
   {
-    "name": "Desodorante activo en crema (85gr)",
-    "description": "Neutraliza el olor todo el día de forma natural. Combate bacterias, es antiséptico y evita hongos. Formulado con carbón activo, aceites esenciales y arcilla. Libre de aluminio y químicos tóxicos. No causa irritación. Dura hasta 4 meses.",
+    "name": "Desodorante en Crema con Aceite de Copaiba con aroma a Lavanda y Limon  (85gr)",
+    "description": "Neutraliza el olor todo el día de forma natural. Combate bacterias, es antiséptico y evita hongos. Formulado con aceite de copaiba y  aceites esenciales.  Libre de aluminio y químicos tóxicos. No causa irritación. Dura hasta 4 meses.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/4xEHO",
     "price": 40,
     "catalog_id": 14,
-    "ingredients": "Aceites esenciales de lavanda, limón,  manteca de cacao, aceite de coco, polen de abeja, ricinoleato de zinc, sábila, aceite de copaiba, emulsificante natural.",
+    "ingredients": "Aceites esenciales de lavanda, limón,  manteca de cacao, aceite de coco, polen de abeja, sábila, aceite de copaiba, emulsificante natural.",
     "display_order": 20
   },
   {
-    "name": "Desodorante en crema \"yuyito kids\" (30gr)",
-    "description": "Desodorante suave en crema, formulado para ser seguro para la piel delicada de los niños. Con aceites esenciales de lavanda, canela y clavo de olor. Libre de aluminio.",
+    "name": "Desodorante en crema de Manzanilla \"yuyito kids\" (30gr)",
+    "description": "Desodorante de manzanilla en crema, formulado para la piel delicada de los niños. Con extracto de manzanilla, sabila, Son suaves para las pieles mas delicada. ",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/fNUdq",
     "price": 20,
     "catalog_id": 15,
-    "ingredients": "Aceites  de manzanilla,  manteca de cacao, aceite de coco, polen de abeja, ricinoleato de zinc, sábila, aceite de copaiba, emulsificante natural.\nUso de 2 a 11 años.",
+    "ingredients": "Aceites  de manzanilla,  manteca de cacao, aceite de coco, sábila, aceite de copaiba, emulsificante natural.\nUso de 2 a 11 años.",
     "display_order": 21
   },
   {
-    "name": "Desodorante en crema de carbón activado (85gr)",
-    "description": "Desodorante natural con carbón activado para una purificación y control de olores superior. Neutraliza bacterias, es antiséptico y ayuda a quitar manchas. Libre de aluminio. Muy efectivo y no irritante.",
+    "name": "Desodorante en crema de carbón activado  y Aceite de Copaiba (85gr)",
+    "description": "Desodorante natural con carbón activado para una purificación Anti manchas y control de olores fuertes Neutraliza bacterias, es antiséptico y ayuda a quitar manchas. Libre de aluminio. Muy efectivo y no irritante.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/5QybP",
     "price": 40,
     "catalog_id": 16,
-    "ingredients": "Aceites esencial de lavanda y limón, aceite de coco, manteca de cacao, polen de abejas, ricinoleato de zinc, sábila, aceite de copaiba, carbón activado, emulsificante natural.",
+    "ingredients": "Aceites esencial de lavanda y limón, aceite de coco, manteca de cacao, polen de abejas, sábila, aceite de copaiba, carbón activado, emulsificante natural.",
     "display_order": 22
   },
   {
@@ -306,7 +306,7 @@ const productData = [
     "display_order": 32
   },
   {
-    "name": "Jabón para bebe y niño (100gr)",
+    "name": "Jabón para bebe y niño (120gr)",
     "description": "Jabón suave y sanador con leche de coco, manzanilla y miel de abeja. Ideal para piel delicada y sensible. Super relajante, mantiene la piel suave y protegida. Libre de químicos tóxicos y aluminio.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/yzTqC",
     "price": 20,
@@ -333,8 +333,8 @@ const productData = [
     "display_order": 34
   },
   {
-    "name": "Locion de aguaje (30ml)",
-    "description": "Loción tratamiento para cicatrices y manchas en la piel. Aclara las manchas, es antioxidante y regenera la piel. Proporciona hidratación, humectación y elasticidad. Tonifica, protege de los rayos UV y ayuda con la producción de colágeno. Se recomienda refrigerar.",
+    "name": "Locion de aguaje Hidratante y Humectante (30ml)",
+    "description": "Loción tratamiento para cicatrices y manchas en la piel. Ayuda a prevenir las manchas, es antioxidante y regenera la piel. Proporciona hidratación, humectación. Tonifica la piel y protege de los rayos UV.  Tiene vitamina A y E . Uso en el dia  y noche.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/IqwYe",
     "price": 40,
     "catalog_id": 32,
@@ -342,8 +342,8 @@ const productData = [
     "display_order": 35
   },
   {
-    "name": "Locion de espirulina (30ml)",
-    "description": "Loción formulada para pieles atópicas, sensibles y delicadas. De uso nocturno, ayuda a combatir la comezón de la dermatitis atópica. Brinda hidratación inmediata, previene el ingreso de alérgenos, protege de radiaciones solares y ayuda a cicatrizar el acné. Hipoalergénica. Refrigerar.",
+    "name": "Locion de espirulina para piel atopicas (30ml)",
+    "description": "Loción formulada para pieles atópicas, sensibles y delicadas. Uso dia o noche , ayuda a regenerar la piel. Ayuda en tratamientos de  dermatitis atópica. Brinda hidratación inmediata, previene el ingreso de alérgenos, protege de radiaciones solares Hipoalergénica. Refrigerar.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/9j5yu",
     "price": 40,
     "catalog_id": 33,
@@ -351,7 +351,7 @@ const productData = [
     "display_order": 36
   },
   {
-    "name": "Locion repelente (100ml)",
+    "name": "Repelente de zancudos y moscas en locion (100ml)",
     "description": "Repelente natural super efectivo con aceites esenciales de romero, muña, clavo de olor, lavanda, hierva luisa y eucalipto. Apto para niños y adultos. Cubre la piel evitando picaduras por hasta 5 horas. Hidrata y es apto para todo tipo de piel.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/vCWsZ",
     "price": 25,
@@ -360,8 +360,8 @@ const productData = [
     "display_order": 37
   },
   {
-    "name": "Mascara de pestañas (maron)",
-    "description": "Máscara de pestañas en color marrón para un look definido y natural.",
+    "name": "Mascara de pestañas (maron) 5 gr",
+    "description": "Máscara de pestañas nutre y fortalece en color marrón para un look definido y natural. Aumenta el grosor de las  pestañas para una mirada atractiva.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/msC6B",
     "price": 27,
     "catalog_id": 36,
@@ -369,8 +369,8 @@ const productData = [
     "display_order": 38
   },
   {
-    "name": "Mascara de pestañas (negro)",
-    "description": "Máscara de pestañas en color negro clásico para un impacto dramático.",
+    "name": "Mascara de pestañas (negro) 5 gr",
+    "description": "Máscara de pestañas nutre y fortalece en color Negro  para un look definido y natural. Aumenta el grosor de las  pestañas para una mirada atractiva.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/RLJG5",
     "price": 27,
     "catalog_id": 37,
@@ -378,8 +378,8 @@ const productData = [
     "display_order": 39
   },
   {
-    "name": "Mascarilla solida",
-    "description": "Mascarilla facial sólida, fácil de aplicar y enjuagar, para un tratamiento práctico.",
+    "name": "Mascarilla solida DETOX rostro y cuerpo (70 gr)",
+    "description": "Desintoxica la piel y limpia profundamente puntos negros y restos de Acne.  Fácil de aplicar y enjuagar, para un tratamiento práctico y diario.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/hzjxZ",
     "price": 25,
     "catalog_id": 38,
@@ -387,8 +387,8 @@ const productData = [
     "display_order": 40
   },
   {
-    "name": "Oleo amazonico",
-    "description": "Óleo amazónico, una mezcla de aceites preciosos de la selva para diversos usos nutritivos.",
+    "name": "Oleo amazonico 30 ml ",
+    "description": "Óleo amazónico, una mezcla de aceites exoticos y extractos de flores y plantas de la selva para diversos usos nutritivos. Textura ligera y de rapida absorcion, Rico en ceramidas, omegas, Vitamina A y E. No comedogenica. Es perfecto para todas las estaciones del año.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/1L4n6",
     "price": 55,
     "catalog_id": 39,
@@ -396,8 +396,8 @@ const productData = [
     "display_order": 41
   },
   {
-    "name": "Orquídea cream antiedad (50gr)",
-    "description": "Tratamiento anti-edad de lujo con aloe vera, manteca de cacao, aceite de aguaje, aceite de pepas de uvas, polen de abejas y extracto de orquídeas. Antioxidante, retrasa el envejecimiento, regula la pigmentación y nutre la piel con minerales. Deja la piel suave, luminosa y libre de impurezas.",
+    "name": "Orquídea cream Antiedad (50gr)",
+    "description": "Tratamiento anti-edad de lujo con aloe vera Y extracto de orquídeas. Antioxidante, retrasa el envejecimiento, regula la pigmentación y nutre la piel con minerales. Deja la piel suave, luminosa y libre de impurezas.     Con propiedades zinc, hierro, magnesio y calcio. USO dia y noche ",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/RejBR",
     "price": 45,
     "catalog_id": 40,
@@ -406,7 +406,7 @@ const productData = [
   },
   {
     "name": "Pasta dental \"yuyito kids\" (30gr)",
-    "description": "Pasta dental suave y segura para el cuidado dental de los más pequeños.",
+    "description": "Pasta dental suave y segura para el cuidado dental de los más pequeños. Con sabor a fresa ",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/eE17y",
     "price": 15,
     "catalog_id": 42,
@@ -441,7 +441,7 @@ const productData = [
     "display_order": 46
   },
   {
-    "name": "Stick iluminador (dorado)",
+    "name": "Stick iluminador rostro (dorado) 10 gr",
     "description": "Stick iluminador en tono dorado para realzar los puntos altos del rostro.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/dG8mr",
     "price": 27,
@@ -450,8 +450,8 @@ const productData = [
     "display_order": 47
   },
   {
-    "name": "Stick iluminador (rosado perlado)",
-    "description": "Stick iluminador en tono rosado perlado para un brillo suave y natural.",
+    "name": "Stick iluminador rostro (rosado perlado) 10 gr",
+    "description": "Stick iluminador en tono rosado perlado para un brillo suave y natural en tu rostro ",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/wBxZ3",
     "price": 27,
     "catalog_id": 52,
@@ -459,7 +459,7 @@ const productData = [
     "display_order": 48
   },
   {
-    "name": "Unguento cannabis y manzanilla (50gr)",
+    "name": "Unguento Medicinal cannabis y manzanilla (50gr)",
     "description": "Ungüento para aliviar dolores en los músculos y sanar la piel. Calma irritación y prurito, ayuda a eliminar bacterias que causan acné. Recomendado para masajes calmantes y relajantes. Hidratante, reafirmante, regenerador y rico en ácidos grasos esenciales y Vitamina E. No contiene alcanfor.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/kqLrJ",
     "price": 45,
@@ -468,8 +468,8 @@ const productData = [
     "display_order": 49
   },
   {
-    "name": "Unguento de espirulina (50gr)",
-    "description": "Ungüento nutritivo de espirulina para tratar y rejuvenecer la piel. Aporta flexibilidad, suavidad y elasticidad, ayudando a luchar contra el envejecimiento prematuro. Protege contra la radiación UV y es antiinflamatorio.",
+    "name": "Unguento Regenerador de espirulina (50gr)",
+    "description": "Ungüento nutritivo de espirulina para tratar y rejuvenecer la piel. Tiene gran cantidad de ficocianina suer antioxidante. Aporta flexibilidad, suavidad y elasticidad, ayudando a luchar contra el envejecimiento prematuro. Protege contra la radiación UV y es antiinflamatorio.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/AqRXf",
     "price": 50,
     "catalog_id": 54,
@@ -478,7 +478,7 @@ const productData = [
   },
   {
     "name": "Unguento nutritivo de aguaje (50gr)",
-    "description": "Ungüento profundamente nutritivo con aguaje para pieles secas o dañadas. Ayuda a regenerar estrías y cicatrices, aclara manchas y protege del envejecimiento prematuro.",
+    "description": "Ungüento nutritivo puro con aguaje para pieles secas o dañadas. Ayuda a regenerar estrías y cicatrices, Ayuda a prevenir las manchas y protege del envejecimiento prematuro.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/57Edf",
     "price": 45,
     "catalog_id": 55,
@@ -495,8 +495,8 @@ const productData = [
     "display_order": 52
   },
   {
-    "name": "Elixir capilar (30ml)",
-    "description": "Formula botánica con ortiga y romero para estimular el crecimiento, manzanilla para suavizar y aceites de sacha inchi, ungurahui y palta para hidratar profundamente. Los aceites esenciales de menta y romero activan la circulación, mientras la glicerina sella la humedad.",
+    "name": "Elixir capilar (30ml) ",
+    "description": "Formula botánica para cabeellos mas fuertes y brillantes. Los aceites esenciales de menta y romero activan la circulación, mientras la glicerina sella la humedad. Estimula el crecimiento del cabello.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/mJKx9",
     "price": 50,
     "catalog_id": 57,
@@ -505,7 +505,7 @@ const productData = [
   },
   {
     "name": "Loción antiacné \"lux selva pura\" (30ml)",
-    "description": "Formula botánica antiacné con acción reparadora a base de ingredientes botánicos. El aceite de sacha inchi y girasol nutre sin obstruir los poros, mientras el oleato y extracto de manzanilla calman la piel. La cúrcuma y la espirulina purifican, y la sangre de grado favorece la regeneración celular. Fórmula ligera con agua destilada y emulsificante natural.\nCombate granos e impurezas sin resecar, repara y regenera la piel dañada y calma rojeces e irritaciones.",
+    "description": "Formula botánica Antiacné con acción cicatrizante y reparadora a base de ingredientes botánicos puros\nCombate granos e impurezas sin resecar, repara y regenera la piel dañada y calma inflamacion e irritaciones.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/BF9FU",
     "price": 50,
     "catalog_id": 58,
