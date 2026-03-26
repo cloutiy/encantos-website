@@ -66,7 +66,7 @@ const productData = [
     "name": "Lipstick multiuso (cattleya fucsia)",
     "description": "Pinta tus labios al máximo con este vibrante color fucsia. Labial nutritivo e hidratante formulado con manteca de cacao, aceite de coco, cera de abejas, polen, miel y pigmentos minerales. Es comestible, de aroma dulce, y se puede usar como rubor o sombra. Libre de químicos tóxicos. 5 gr.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/BQrSs",
-    "price": 27,
+    "price": 28,
     "catalog_id": 29,
     "ingredients": "Manteca de cacao, aceite de aguaje ,aceite de coco,cera candelilla,aceite esencial de lavanda, oxido de zinc, recina de sangre de grado, pigmentos vegetal y mineral.",
     "display_order": 7
@@ -75,7 +75,7 @@ const productData = [
     "name": "Lipstick multiuso (coral pishcota)",
     "description": "Un tono coral suave y natural para labios hidratados y con color. Elaborado con ingredientes naturales como manteca de cacao y cera de abeja. Es comestible, nutritivo y multifuncional (labial, rubor, sombra). Libre de químicos tóxicos. Presentación de 5 gr.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/TVa8x",
-    "price": 27,
+    "price": 28,
     "catalog_id": 30,
     "ingredients": "Manteca de cacao, aceite de aguaje ,aceite de coco,cera candelilla,aceite esencial de lavanda, oxido de zinc, recina de sangre de grado, pigmentos vegetal y mineral.",
     "display_order": 7
@@ -84,7 +84,7 @@ const productData = [
     "name": "Lipstick multiuso (rojo moshaka)",
     "description": "Un rojo intenso y clásico para un look audaz. Labial hidratante formulado con manteca de cacao, aceite de coco, cera de abejas, polen, miel y pigmentos minerales. Nutre, hidrata y pinta tus labios sin químicos tóxicos. Presentación de 5 gr.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/wvASz",
-    "price": 27,
+    "price": 28,
     "catalog_id": 31,
     "ingredients": "Manteca de cacao, aceite de aguaje ,aceite de coco,cera candelilla,aceite esencial de lavanda, oxido de zinc, recina de sangre de grado, pigmentos vegetal y mineral.",
     "display_order": 8
@@ -237,7 +237,7 @@ const productData = [
     "name": "Jabón de carbon activado (100gr)",
     "description": "Jabón antibacteriano ideal para el acné. Limpia profundamente, equilibra la grasa, elimina toxinas e impurezas. Actúa como un exfoliante suave gracias al carbón activado.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/OIZAS",
-    "price": 10,
+    "price": 12,
     "catalog_id": 19,
     "ingredients": "Glicerina, polvo de carbon activado.",
     "display_order": 25
@@ -264,7 +264,7 @@ const productData = [
     "name": "Jabón de hierba luisa y limon (100gr)",
     "description": "Jabón emoliente y refrescante con aceite de coco, almendras, manteca de cacao y aceite esencial de limon. Perfecto para relajarse después de un día agotador; hidrata, desinflama, relaja y mejora el sueño. Ideal para una ducha nocturna. Aroma fresco.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/8DpwM",
-    "price": 10,
+    "price": 12,
     "catalog_id": 22,
     "ingredients": "Glicerina, hierba luisa, aceite de coco, aceite esencial de limon.",
     "display_order": 28
@@ -273,7 +273,7 @@ const productData = [
     "name": "Jabón de maracuya (100gr)",
     "description": "Jabón hidratante y humectante con manteca de cacao, aceite de coco y aceite esencial de canela. Rico en Vitamina C, deja tu piel fresca, suave y renovada con un dulce aroma a frutas. Apto para todo tipo de piel.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/5KMGn",
-    "price": 10,
+    "price": 12,
     "catalog_id": 23,
     "ingredients": "Glicerina, aceite de coco, manteca de cacao, aceite esencial de canela.",
     "display_order": 29
@@ -291,7 +291,7 @@ const productData = [
     "name": "Jabón de ruda (100gr)",
     "description": "Jabón para protección y limpieza energética. Elaborado con ruda hembra y macho, salvia y romero. Ayuda a neutralizar energías negativas y contra el mal ojo. Para salud, trabajo y negocios.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/f9IIr",
-    "price": 10,
+    "price": 12,
     "catalog_id": 25,
     "ingredients": "Glicerina, aceite de coco, huayruro\nextractos de ruda, salvia y romero.",
     "display_order": 31
@@ -300,7 +300,7 @@ const productData = [
     "name": "Jabón exfoliante de cafe (100gr)",
     "description": "Jabón exfoliante con café, aceite de coco, manteca de cacao y aceite de pepas de uvas. Activa la circulación y ayuda a reducir la celulitis. La cafeína ayuda a eliminar toxinas y grasas, dejando la piel más tersa.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/XayUV",
-    "price": 10,
+    "price": 12,
     "catalog_id": 26,
     "ingredients": "Glicerina, café, aceite de coco, \nmanteca de cacao,\naceite de pepas de uva.",
     "display_order": 32
