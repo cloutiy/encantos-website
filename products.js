@@ -1,4 +1,13 @@
-const productData = [
+const productData = [ 
+  {
+    "name": "Exfoliante facial y corporal de café",
+    "description": "Un exfoliante suave que elimina las células muertas sin irritar la piel, mientras disminuye la hinchazón y las ojeras. Tonifica la piel y la deja radiante y revitalizada. Sus antioxidantes naturales del café protegen la piel del estrés oxidativo ambiental y estimulan la circulación para un cutis más saludable.",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/9Rr4b",
+    "price": 25,
+    "catalog_id": 58,
+    "ingredients": "Aceite de coco, aceite de girasol, café seleccionado molido, aceite esencial de limón.",
+    "display_order": 1
+  },
   {
     "name": "Fotoprotector con color nude (30ml)",
     "description": "Consigue una cobertura uniforme y un acabado natural con esta crema facial de rápida absorción que unifica el tono de tu piel, reduce imperfecciones y proporciona una protección ligera pero eficaz contra los rayos UVA y UVB, todo ello con una fórmula no grasa, apta para pieles sensibles y libre de parabenos y ftalatos.",
@@ -469,7 +478,7 @@ const productData = [
   },
   {
     "name": "Unguento Regenerador de espirulina (50gr)",
-    "description": "Ungüento nutritivo de espirulina para tratar y rejuvenecer la piel. Tiene gran cantidad de ficocianina suer antioxidante. Aporta flexibilidad, suavidad y elasticidad, ayudando a luchar contra el envejecimiento prematuro. Protege contra la radiación UV y es antiinflamatorio.",
+    "description": "Ungüento nutritivo de espirulina para tratar y rejuvenecer la piel. Tiene gran cantidad de ficocianina super antioxidante. Aporta flexibilidad, suavidad y elasticidad, ayudando a luchar contra el envejecimiento prematuro. Protege contra la radiación UV y es antiinflamatorio. USO en las noches.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/AqRXf",
     "price": 50,
     "catalog_id": 54,
