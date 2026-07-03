@@ -1,4 +1,13 @@
-const productData = [ 
+const productData = [
+  {
+    "name": "Jabón de miel y avena (120gr)",
+    "description": "Hidrata y suaviza profundamente.\nCalma irritaciones y enrojecimientos.\nNutre y regenera gracias al polen.\nApto para pieles secas \nApto para pieles sensibles \nAyuda a combatir acné leve \nMejora la textura y el brillo natural de la piel.\nApto para niños y adultos.",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/A2MXc",
+    "price": 20,
+    "catalog_id": 26,
+    "ingredients": "Glicerina, avena, miel de abeja, polen de abeja, aceite de coco.",
+    "display_order": 0
+  },
   {
     "name": "Exfoliante facial y corporal de café",
     "description": "Un exfoliante suave que elimina las células muertas sin irritar la piel, mientras disminuye la hinchazón y las ojeras. Tonifica la piel y la deja radiante y revitalizada. Sus antioxidantes naturales del café protegen la piel del estrés oxidativo ambiental y estimulan la circulación para un cutis más saludable.",
