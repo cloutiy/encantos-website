@@ -6,7 +6,7 @@ const productData = [
     "price": 20,
     "catalog_id": 26,
     "ingredients": "Glicerina, avena, miel de abeja, polen de abeja, aceite de coco.",
-    "display_order": 0
+    "display_order": 29
   },
   {
     "name": "Exfoliante facial y corporal de café",
