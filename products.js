@@ -6,7 +6,8 @@ const productData = [
     "price": 25,
     "catalog_id": 1,
     "ingredients": "Manteca de cacao, aceite de castaña amazónica, extracto de vainilla amazónica, aceites de ungurahui y de aguaje, cera vegana, pigmento vegetal.",
-    "display_order": 1
+    "display_order": 1,
+    "categogy": "Cosmeticos botanicos"
   },
   {
     "name": "Lip gloss 10 ml (rojo) ",
@@ -15,7 +16,8 @@ const productData = [
     "price": 25,
     "catalog_id": 1,
     "ingredients": "Manteca de cacao, aceite de castaña amazónica, extracto de vainilla amazónica, aceites de ungurahui y de aguaje, cera vegana, pigmento vegetal.",
-    "display_order": 1
+    "display_order": 1,
+    "categogy": "Cosmeticos botanicos"
   },
   {
     "name": "Exfoliante facial y corporal de café",
@@ -24,16 +26,18 @@ const productData = [
     "price": 25,
     "catalog_id": 58,
     "ingredients": "Aceite de coco, aceite de girasol, café seleccionado molido, aceite esencial de limón.",
-    "display_order": 1
+    "display_order": 1,
+    "categogy": "Cuidado corporal"
   },
   {
-    "name": "Fotoprotector con color nude (30ml)",
+    "name": "Base para maquillaje + proteccion solar color nude (30ml)",
     "description": "Consigue una cobertura uniforme y un acabado natural con esta crema facial de rápida absorción que unifica el tono de tu piel, reduce imperfecciones y proporciona una protección ligera pero eficaz contra los rayos UVA y UVB, todo ello con una fórmula no grasa, apta para pieles sensibles y libre de parabenos y ftalatos.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/pabRP",
     "price": 50,
     "catalog_id": 60,
     "ingredients": "Agua destilada, emulsificante natural, oxido de zinc, aceite de aguaje, aceite de ungurahui, aceite de sacha inchi, glicerina vegetal, extracto botánico de manzanilla, sharomix, pigmento mineral, vitamina E (tocoferol), aceite esencial de jasmin, extracto de vainilla amazónica.",
-    "display_order": 1
+    "display_order": 1,
+    "categogy": "Belleza facial"
   },
   {
     "name": "Bloqueador solar (100ml)",
@@ -42,7 +46,8 @@ const productData = [
     "price": 70,
     "catalog_id": 10,
     "ingredients": "Aceite de aguaje, aceite de coco, aceite de ajonjoli, aceite de zanahoria, manteca de karite, sábila, oxido de zinc, vainilla.",
-    "display_order": 1
+    "display_order": 1,
+    "categogy": "Belleza facial,Cuidado corporal"
   },
   {
     "name": "Bloqueador solar (30ml)",
@@ -51,7 +56,8 @@ const productData = [
     "price": 25,
     "catalog_id": 11,
     "ingredients": "Aceite de aguaje, aceite de coco, aceite de ajonjoli, aceite de zanahoria, manteca de karite, sábila, oxido de zinc, vainilla.",
-    "display_order": 2
+    "display_order": 2,
+    "categogy": "Belleza facial,Cuidado corporal"
   },
   {
     "name": "Shampoo botanico liquido (250ml)",
@@ -60,7 +66,8 @@ const productData = [
     "price": 47,
     "catalog_id": 48,
     "ingredients": "Agua destilada, SCI, glycerina liquida, goma xanthan, betaina de coco, aceites de ungurahui, sacha inchi, ricino y coco, aceites esenciales de romero, menta, lavanda, y hierba luisa, extracto de jengibre conservante natural.",
-    "display_order": 3
+    "display_order": 3,
+    "categogy": "Cuidado de cabello"
   },
   {
     "name": "Acondicionador Amazonico en crema (250ml)",
@@ -69,7 +76,8 @@ const productData = [
     "price": 47,
     "catalog_id": 5,
     "ingredients": "Aceite de ungurahui, aceite de coco y ricino, hidrolato de hierba luisa, manteca de cacao, vitamina E, aceite de aguaje, aloe vera, extractos de ortiga, verbena, romero y eucalipto, emulsionante natural, conservante natural.",
-    "display_order": 4
+    "display_order": 4,
+    "categogy": "Cuidado de cabello"
   },
   {
     "name": "Pasta dental sin flúor (100gr)",
@@ -78,7 +86,8 @@ const productData = [
     "price": 30,
     "catalog_id": 43,
     "ingredients": "Carbonato de calcio, muña, sábila, betaina de coco, infución de muña infusión de anís, SCI, aceite esencial de clavo de olor, canela y menta, glicerina, aceite de ajonjolí.",
-    "display_order": 5
+    "display_order": 5,
+    "categogy": "Salud bucal"
   },
   {
     "name": "Pasta dental sin flúor  de menta + eucalipto (100gr)",
@@ -87,7 +96,8 @@ const productData = [
     "price": 30,
     "catalog_id": 44,
     "ingredients": "Carbonato de calcio, muña, sábila, betaina de coco, infución de muña infusión de anís, SCI, aceite esencial de eucalipto y menta, glicerina, aceite de ajonjolí.",
-    "display_order": 6
+    "display_order": 6,
+    "categogy": "Salud bucal"
   },
   {
     "name": "Lipstick multiuso Botanico (cattleya fucsia) 10 gr",
@@ -96,7 +106,8 @@ const productData = [
     "price": 28,
     "catalog_id": 29,
     "ingredients": "Manteca de cacao, aceite de aguaje ,aceite de coco,cera candelilla,aceite esencial de lavanda, oxido de zinc, recina de sangre de grado, pigmentos vegetal y mineral.",
-    "display_order": 7
+    "display_order": 7,
+    "categogy": "Cosmeticos botanicos"
   },
   {
     "name": "Lipstick multiuso Botanico (coral pishcota) 10 gr",
@@ -105,7 +116,8 @@ const productData = [
     "price": 28,
     "catalog_id": 30,
     "ingredients": "Manteca de cacao, aceite de aguaje ,aceite de coco,cera candelilla,aceite esencial de lavanda, oxido de zinc, recina de sangre de grado, pigmentos vegetal y mineral.",
-    "display_order": 7
+    "display_order": 7,
+    "categogy": "Cosmeticos botanicos"
   },
   {
     "name": "Lipstick multiuso Botanico (rojo moshaka) 10 gr",
@@ -114,7 +126,8 @@ const productData = [
     "price": 28,
     "catalog_id": 31,
     "ingredients": "Manteca de cacao, aceite de aguaje ,aceite de coco,cera candelilla,aceite esencial de lavanda, oxido de zinc, recina de sangre de grado, pigmentos vegetal y mineral.",
-    "display_order": 8
+    "display_order": 8,
+    "categogy": "Cosmeticos botanicos"
   },
   {
     "name": "Pack \"yuyito kids\"",
@@ -123,7 +136,8 @@ const productData = [
     "price": 55,
     "catalog_id": 41,
     "ingredients": "Los ingredientes naturales y organicos. libres de parabenos, Hipoalergenicos. Para el cuidado de bebes y niños de 2 años a 11 años.",
-    "display_order": 9
+    "display_order": 9,
+    "categogy": "Cuidado infantil"
   },
   {
     "name": "Aceite de aguaje (30ml)",
@@ -132,7 +146,8 @@ const productData = [
     "price": 35,
     "catalog_id": 1,
     "ingredients": "Aceite de aguaje virgen (prensado en frio)",
-    "display_order": 10
+    "display_order": 10,
+    "categogy": "Belleza facial"
   },
   {
     "name": "CBD Aceite de cannabis 10% (10ml)",
@@ -141,7 +156,8 @@ const productData = [
     "price": 250,
     "catalog_id": 2,
     "ingredients": "CBD Aceite de cannabis puro ",
-    "display_order": 11
+    "display_order": 11,
+    "categogy": "Uso terapeutico"
   },
   {
     "name": "CBD Aceite de cannabis 5% de (10 ml)",
@@ -150,7 +166,8 @@ const productData = [
     "price": 180,
     "catalog_id": 3,
     "ingredients": "CBD Aceite de cannabis puro ",
-    "display_order": 12
+    "display_order": 12,
+    "categogy": "Uso terapeutico"
   },
   {
     "name": "Aceite de ungurahui (30ml)",
@@ -159,7 +176,8 @@ const productData = [
     "price": 35,
     "catalog_id": 4,
     "ingredients": "Aceite de ungurahui Virgen",
-    "display_order": 13
+    "display_order": 13,
+    "categogy": "Cuidado de cabello,Belleza facial"
   },
   {
     "name": "Bálsamo labial de achiote y cochinilla",
@@ -168,7 +186,8 @@ const productData = [
     "price": 18,
     "catalog_id": 6,
     "ingredients": "Manteca de cacao, cera de abeja, aceite de aguaje, polvo de achiote, cochinilla.",
-    "display_order": 14
+    "display_order": 14,
+    "categogy": "Cosmeticos botanicos"
   },
   {
     "name": "Bálsamo labial de chocolate",
@@ -177,7 +196,8 @@ const productData = [
     "price": 15,
     "catalog_id": 7,
     "ingredients": "Manteca de cacao, polen de abeja, cacao 100%, aceite de coco, cera de abeja, miel de abeja.",
-    "display_order": 15
+    "display_order": 15,
+    "categogy": "Cosmeticos botanicos"
   },
   {
     "name": "Bálsamo labial natural",
@@ -186,7 +206,8 @@ const productData = [
     "price": 12,
     "catalog_id": 8,
     "ingredients": "Manteca de cacao, cera de abeja, miel de abeja, coco y extracto de vainilla amazónica. ",
-    "display_order": 16
+    "display_order": 16,
+    "categogy": "Cosmeticos botanicos"
   },
   {
     "name": "Bloqueador solar \"yuyito kids\" (30gr)",
@@ -195,7 +216,8 @@ const productData = [
     "price": 20,
     "catalog_id": 9,
     "ingredients": "Aceite de aguaje, aceite de coco, aceite de ajonjoli, aceite de zanahoria, manteca de karite, sábila, oxido de zinc, vainilla.\nUso de 2 a 11 años.",
-    "display_order": 17
+    "display_order": 17,
+    "categogy": "Cuidado infantil"
   },
   {
     "name": "Unguento puro con ungurahui y romero para cabello secos y maltratados (50gr)",
@@ -204,7 +226,8 @@ const productData = [
     "price": 45,
     "catalog_id": 12,
     "ingredients": "Sábila, aceite de ungurahui, aceite de ricino, hidrolato de romero, cera de abejas, aceite de ajonjolí, aceites esenciales de romero y canela.",
-    "display_order": 18
+    "display_order": 18,
+    "categogy": "Cuidado de cabello"
   },
   {
     "name": "Crema nutritiva de aguaje (50gr)",
@@ -213,7 +236,8 @@ const productData = [
     "price": 45,
     "catalog_id": 13,
     "ingredients": "Manteca de cacao, agua destilada, aceite de aguaje amazónica, aceite de coco, emulsificante natural.",
-    "display_order": 19
+    "display_order": 19,
+    "categogy": "Belleza facial"
   },
   {
     "name": "Desodorante en Crema con Aceite de Copaiba con aroma a Lavanda y Limon  (85gr)",
@@ -222,7 +246,8 @@ const productData = [
     "price": 40,
     "catalog_id": 14,
     "ingredients": "Aceites esenciales de lavanda, limón,  manteca de cacao, aceite de coco, polen de abeja, sábila, aceite de copaiba, emulsificante natural.",
-    "display_order": 20
+    "display_order": 20,
+    "categogy": "Cuidado corporal"
   },
   {
     "name": "Desodorante en crema de Manzanilla \"yuyito kids\" (30gr)",
@@ -231,7 +256,8 @@ const productData = [
     "price": 20,
     "catalog_id": 15,
     "ingredients": "Aceites  de manzanilla,  manteca de cacao, aceite de coco, sábila, aceite de copaiba, emulsificante natural.\nUso de 2 a 11 años.",
-    "display_order": 21
+    "display_order": 21,
+    "categogy": "Cuidado infantil"
   },
   {
     "name": "Desodorante en crema de carbón activado  y Aceite de Copaiba (85gr)",
@@ -240,7 +266,8 @@ const productData = [
     "price": 40,
     "catalog_id": 16,
     "ingredients": "Aceites esencial de lavanda y limón, aceite de coco, manteca de cacao, polen de abejas, sábila, aceite de copaiba, carbón activado, emulsificante natural.",
-    "display_order": 22
+    "display_order": 22,
+    "categogy": "Cuidado corporal"
   },
   {
     "name": "Jabón de cacao y aguaje (100gr)",
@@ -249,7 +276,8 @@ const productData = [
     "price": 13,
     "catalog_id": 17,
     "ingredients": "Glicerina, aceite de coco, manteca de cacao, aceite de aguaje.",
-    "display_order": 23
+    "display_order": 23,
+    "categogy": "Cuidado corporal"
   },
   {
     "name": "Jabón de cannabis y manzanilla (100gr)",
@@ -258,7 +286,8 @@ const productData = [
     "price": 13,
     "catalog_id": 18,
     "ingredients": "Glicerina, aloe vera, manteca de cacao, aceite de manzanilla, aceite de cannabis.",
-    "display_order": 24
+    "display_order": 24,
+    "categogy": "Cuidado corporal"
   },
   {
     "name": "Jabón de carbon activado (100gr)",
@@ -267,7 +296,8 @@ const productData = [
     "price": 12,
     "catalog_id": 19,
     "ingredients": "Glicerina, polvo de carbon activado.",
-    "display_order": 25
+    "display_order": 25,
+    "categogy": "Cuidado corporal"
   },
   {
     "name": "Jabón de curcuma (100gr)",
@@ -276,7 +306,8 @@ const productData = [
     "price": 15,
     "catalog_id": 20,
     "ingredients": "Glicerina, aceite de coco, cúrcuma, sangre de grado.",
-    "display_order": 26
+    "display_order": 26,
+    "categogy": "Cuidado corporal"
   },
   {
     "name": "Jabón de espirulina (80gr)",
@@ -285,7 +316,8 @@ const productData = [
     "price": 15,
     "catalog_id": 21,
     "ingredients": "Glicerina, aceite de almendra, sacha inchi, manteca de cacao, espirulina.",
-    "display_order": 27
+    "display_order": 27,
+    "categogy": "Cuidado corporal"
   },
   {
     "name": "Jabón de hierba luisa y limon (100gr)",
@@ -294,7 +326,8 @@ const productData = [
     "price": 12,
     "catalog_id": 22,
     "ingredients": "Glicerina, hierba luisa, aceite de coco, aceite esencial de limon.",
-    "display_order": 28
+    "display_order": 28,
+    "categogy": "Cuidado corporal"
   },
   {
     "name": "Jabón de miel y avena (120gr)",
@@ -303,7 +336,8 @@ const productData = [
     "price": 20,
     "catalog_id": 26,
     "ingredients": "Glicerina, avena, miel de abeja, polen de abeja, aceite de coco.",
-    "display_order": 29
+    "display_order": 29,
+    "categogy": "Cuidado corporal"
   },
   {
     "name": "Jabón de maracuya (100gr)",
@@ -312,7 +346,8 @@ const productData = [
     "price": 12,
     "catalog_id": 23,
     "ingredients": "Glicerina, aceite de coco, manteca de cacao, aceite esencial de canela.",
-    "display_order": 29
+    "display_order": 29,
+    "categogy": "Cuidado corporal"
   },
   {
     "name": "Jabón de orquidea(100gr)",
@@ -321,7 +356,8 @@ const productData = [
     "price": 13,
     "catalog_id": 24,
     "ingredients": "Glicerina, aceite de pepa de uva, petalos de orquídea, aloe vera,aceite de aguaje.",
-    "display_order": 30
+    "display_order": 30,
+    "categogy": "Cuidado corporal"
   },
   {
     "name": "Jabón de ruda (100gr)",
@@ -330,7 +366,8 @@ const productData = [
     "price": 12,
     "catalog_id": 25,
     "ingredients": "Glicerina, aceite de coco, huayruro\nextractos de ruda, salvia y romero.",
-    "display_order": 31
+    "display_order": 31,
+    "categogy": "Cuidado corporal"
   },
   {
     "name": "Jabón exfoliante de cafe (100gr)",
@@ -339,7 +376,8 @@ const productData = [
     "price": 12,
     "catalog_id": 26,
     "ingredients": "Glicerina, café, aceite de coco, \nmanteca de cacao,\naceite de pepas de uva.",
-    "display_order": 32
+    "display_order": 32,
+    "categogy": "Cuidado corporal"
   },
   {
     "name": "Jabón para bebe y niño (120gr)",
@@ -348,7 +386,8 @@ const productData = [
     "price": 20,
     "catalog_id": 59,
     "ingredients": "Glicerina, manzanilla, \nmiel de abeja, leche de coco.\n",
-    "display_order": 33
+    "display_order": 33,
+    "categogy": "Cuidado corporal,Cuidado infantil"
   },
   {
     "name": "Jabón para bebe y niño (50gr)",
@@ -357,7 +396,8 @@ const productData = [
     "price": 10,
     "catalog_id": 27,
     "ingredients": "Glicerina, manzanilla, \nmiel de abeja, leche de coco.\n",
-    "display_order": 33
+    "display_order": 33,
+    "categogy": "Cuidado corporal,Cuidado infantil"
   },
   {
     "name": "Jabón sangre de grado, copaiba y arnica (100gr)",
@@ -366,7 +406,8 @@ const productData = [
     "price": 15,
     "catalog_id": 28,
     "ingredients": "Glicerina, arnica, cacao,\naceite de copaiba, aceite \nde oliva, sangre de grado.",
-    "display_order": 34
+    "display_order": 34,
+    "categogy": "Cuidado corporal"
   },
   {
     "name": "Locion de aguaje Hidratante y Humectante (30ml)",
@@ -375,7 +416,8 @@ const productData = [
     "price": 40,
     "catalog_id": 32,
     "ingredients": "Agua destilada, sábila, aceite de girasol, aceite de jasmin, aceite de aguaje amazónica, emulsificante.",
-    "display_order": 35
+    "display_order": 35,
+    "categogy": "Belleza facial"
   },
   {
     "name": "Locion de espirulina para piel atopicas (30ml)",
@@ -384,7 +426,8 @@ const productData = [
     "price": 40,
     "catalog_id": 33,
     "ingredients": "Agua destilada, espirulina, aloe vera, aceite de sacha inchi, aceite de girasol, emulsificante.",
-    "display_order": 36
+    "display_order": 36,
+    "categogy": "Belleza facial"
   },
   {
     "name": "Repelente de zancudos y moscas en locion (100ml)",
@@ -393,7 +436,8 @@ const productData = [
     "price": 25,
     "catalog_id": 35,
     "ingredients": "Emulsificante, aceites esenciales de romero, muña, clavo de olor, hidrolato de romero, lavanda, hierba luisa, eucalipto.",
-    "display_order": 37
+    "display_order": 37,
+    "categogy": "Cuidado corporal"
   },
   {
     "name": "Mascara de pestañas (maron) 5 gr",
@@ -402,7 +446,8 @@ const productData = [
     "price": 27,
     "catalog_id": 36,
     "ingredients": "Aceite de ungurahui, cera candelilla, hidrolato de romero, cera carnahuba, extracto de manzanilla, emulsionante natural, vitamina E, aceite de jojoba, pigmento natural.",
-    "display_order": 38
+    "display_order": 38,
+    "categogy": "Cosmeticos botanicos"
   },
   {
     "name": "Mascara de pestañas (negro) 5 gr",
@@ -411,7 +456,8 @@ const productData = [
     "price": 27,
     "catalog_id": 37,
     "ingredients": "Aceite de ungurahui, cera candelilla, hidrolato de romero, cera carnahuba, extracto de manzanilla, emulsionante natural, vitamina E, aceite de jojoba, pigmento natural negro.",
-    "display_order": 39
+    "display_order": 39,
+    "categogy": "Cosmeticos botanicos"
   },
   {
     "name": "Mascarilla solida DETOX rostro y cuerpo (70 gr)",
@@ -420,7 +466,8 @@ const productData = [
     "price": 25,
     "catalog_id": 38,
     "ingredients": "Aceite de açai, carbón activado, almidon de arrurruz, arcilla, espirulina, avena, betaina de coco, manteca de cacao, glicerina.",
-    "display_order": 40
+    "display_order": 40,
+    "categogy": "Belleza facial"
   },
   {
     "name": "Oleo amazonico 30 ml ",
@@ -429,7 +476,8 @@ const productData = [
     "price": 55,
     "catalog_id": 39,
     "ingredients": "Aceites de jojoba, sacha inchi, ungurahui, aguaje y girasol, extractos de manzanilla y lavanda, aceite esencial de lavanda, macerado de vainilla amazónica, vitamina E.",
-    "display_order": 41
+    "display_order": 41,
+    "categogy": "Belleza facial,Cuidado corporal"
   },
   {
     "name": "Orquídea cream Antiedad (50gr)",
@@ -438,7 +486,8 @@ const productData = [
     "price": 45,
     "catalog_id": 40,
     "ingredients": "Aloe vera, manteca de cacao, \naceite de aguaje, aceite de \npepas de uvas, aceite de coco, \nextracto de orquideas, emulsificante, agua destilada, aceite esencial de lavanda.",
-    "display_order": 42
+    "display_order": 42,
+    "categogy": "Belleza facial,Cuidado corporal"
   },
   {
     "name": "Pasta dental \"yuyito kids\" (30gr)",
@@ -447,7 +496,8 @@ const productData = [
     "price": 15,
     "catalog_id": 42,
     "ingredients": "Carbonato de calcio, sábila, betaina de coco, infución de muña, aceites esenciales de clavo de olor, canela y menta, aceite de ajonjolí, saborizante de fresa.\nUso de 2 a 11 años.",
-    "display_order": 43
+    "display_order": 43,
+    "categogy": "Salud bucal,Cuidado infantil"
   },
   {
     "name": "Roll on analgesico con CBD (10gr)",
@@ -456,7 +506,8 @@ const productData = [
     "price": 40,
     "catalog_id": 45,
     "ingredients": "CBD cannabidiol medicinal, extracto de manzanilla, aceite de copaiba, aceite de ajonjoli.",
-    "display_order": 44
+    "display_order": 44,
+    "categogy": "Uso terapeutico"
   },
   {
     "name": "Roll on para ojeras con CBD (10gr)",
@@ -465,7 +516,8 @@ const productData = [
     "price": 35,
     "catalog_id": 46,
     "ingredients": "CBD, \naceite de girasol, extracto de manzanilla. ",
-    "display_order": 45
+    "display_order": 45,
+    "categogy": "Belleza facial"
   },
   {
     "name": "Shampoo herbal solido de romero y ungurahui (80gr)",
@@ -474,7 +526,8 @@ const productData = [
     "price": 28,
     "catalog_id": 47,
     "ingredients": "Aceites de acai, ungurahui, sacha inchi y coco, extracto de romero,  harinas de linaza, romero y menta, betaina de coco,\ntensoactivos naturales.",
-    "display_order": 46
+    "display_order": 46,
+    "categogy": "Cuidado de cabello"
   },
   {
     "name": "Stick iluminador rostro (dorado) 10 gr",
@@ -483,7 +536,8 @@ const productData = [
     "price": 30,
     "catalog_id": 51,
     "ingredients": "Sangre de grado, manteca de cacao, cera abeja, almidon de arrurruz, oxido de zinc, aceite de açaí, aceite esencial de lavanda, pigmento natural.",
-    "display_order": 47
+    "display_order": 47,
+    "categogy": "Belleza facial,Cosmeticos botanicos"
   },
   {
     "name": "Stick iluminador rostro (rosado perlado) 10 gr",
@@ -492,7 +546,8 @@ const productData = [
     "price": 30,
     "catalog_id": 52,
     "ingredients": "Sangre de grado, manteca de cacao, cera abeja, almidon de arrurruz, oxido de zinc, aceite de açaí, aceite esencial de lavanda, pigmento natural.",
-    "display_order": 48
+    "display_order": 48,
+    "categogy": "Belleza facial,Cosmeticos botanicos"
   },
   {
     "name": "Unguento Medicinal cannabis y manzanilla (50gr)",
@@ -501,7 +556,8 @@ const productData = [
     "price": 45,
     "catalog_id": 53,
     "ingredients": "Cera de abeja, manteca de cacao, aceite de ungurahui, aceite de manzanilla, aceite de cannabis, sábila y aceite de ajonjolí. ",
-    "display_order": 49
+    "display_order": 49,
+    "categogy": "Cuidado corporal,Uso terapeutico"
   },
   {
     "name": "Unguento Regenerador de espirulina (50gr)",
@@ -510,7 +566,8 @@ const productData = [
     "price": 50,
     "catalog_id": 54,
     "ingredients": "Cera de abejas, aloe vera, aceite de sacha inchi, aceite de ungurahui, espirulina.",
-    "display_order": 50
+    "display_order": 50,
+    "categogy": "Belleza facial,Cuidado corporal"
   },
   {
     "name": "Unguento nutritivo de aguaje (50gr)",
@@ -519,7 +576,8 @@ const productData = [
     "price": 45,
     "catalog_id": 55,
     "ingredients": "Cera de abeja, manteca de cacao, aceite de aguaje amazónica, aceite de jasmin.",
-    "display_order": 51
+    "display_order": 51,
+    "categogy": "Belleza facial,Cuidado corporal"
   },
   {
     "name": "Unguento orquídea antiedad (50gr)",
@@ -528,7 +586,8 @@ const productData = [
     "price": 45,
     "catalog_id": 56,
     "ingredients": "Aloe vera, manteca de cacao,\naceite de aguaje, aceite de \npepas de uvas, polen de abejas, extracto de orquideas, cera abejas.",
-    "display_order": 52
+    "display_order": 52,
+    "categogy": "Belleza facial,Cuidado corporal"
   },
   {
     "name": "Elixir capilar (30ml) ",
@@ -537,7 +596,8 @@ const productData = [
     "price": 50,
     "catalog_id": 57,
     "ingredients": "Infusión de manzanilla, extracto de ortiga, extracto de romero, glicerina, aceites de sacha inchi, ungurahui y palta, aceites esenciales de menta y romero, agua destilada, emulsificantes naturales.",
-    "display_order": 53
+    "display_order": 53,
+    "categogy": "Cuidado de cabello"
   },
   {
     "name": "Loción antiacné \"lux selva pura\" (30ml)",
@@ -546,6 +606,7 @@ const productData = [
     "price": 50,
     "catalog_id": 58,
     "ingredients": "Aceites de sacha inchi y girasol, oleato de manzanilla, extractos de cúrcuma, espirulina y manzanilla, sangre de grado, agua destilada, emulsificante natural.",
-    "display_order": 54
+    "display_order": 54,
+    "categogy": "Belleza facial"
   }
 ];
