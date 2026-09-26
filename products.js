@@ -47,7 +47,7 @@ const productData = [
   {
     "name": "Bloqueador solar (30ml)",
     "description": "Tamaño práctico de nuestro fotoprotector solar natural FPS 50. Ideal para llevar a todas partes. Protección de amplio espectro, resistente al agua y apto para todo tipo de piel.",
-    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/GSdtB",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/CGX3q",
     "price": 25,
     "catalog_id": 11,
     "ingredients": "Aceite de aguaje, aceite de coco, aceite de ajonjoli, aceite de zanahoria, manteca de karite, sábila, oxido de zinc, vainilla.",
@@ -128,7 +128,7 @@ const productData = [
   {
     "name": "Aceite de aguaje (30ml)",
     "description": "Aceite de aguaje virgen , rico en beta-carotenos. Protege la piel del envejecimiento prematuro, ayuda a regenerar estrías y cicatrices, Ayuda a aclarar manchas. Un antioxidante natural alto en Vit. A y E. que protege de los radicales libres y los rayos UV.",
-    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/Q4PyL",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/73vYn",
     "price": 35,
     "catalog_id": 1,
     "ingredients": "Aceite de aguaje virgen (prensado en frio)",
@@ -155,7 +155,7 @@ const productData = [
   {
     "name": "Aceite de ungurahui (30ml)",
     "description": "Aceite virgen de una fruta exotica el Ungurahui, excelente para tratamientos capilares y cuidado de la piel. Rico en ácidos grasos esenciales y omegas. hidrata y regenera profundamente.",
-    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/7WjpW",
+    "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/ePVaD",
     "price": 35,
     "catalog_id": 4,
     "ingredients": "Aceite de ungurahui Virgen",
@@ -480,7 +480,7 @@ const productData = [
     "name": "Stick iluminador rostro (dorado) 10 gr",
     "description": "Stick iluminador en tono dorado para realzar los puntos altos del rostro.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/dG8mr",
-    "price": 27,
+    "price": 30,
     "catalog_id": 51,
     "ingredients": "Sangre de grado, manteca de cacao, cera abeja, almidon de arrurruz, oxido de zinc, aceite de açaí, aceite esencial de lavanda, pigmento natural.",
     "display_order": 47
@@ -489,7 +489,7 @@ const productData = [
     "name": "Stick iluminador rostro (rosado perlado) 10 gr",
     "description": "Stick iluminador en tono rosado perlado para un brillo suave y natural en tu rostro ",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/wBxZ3",
-    "price": 27,
+    "price": 30,
     "catalog_id": 52,
     "ingredients": "Sangre de grado, manteca de cacao, cera abeja, almidon de arrurruz, oxido de zinc, aceite de açaí, aceite esencial de lavanda, pigmento natural.",
     "display_order": 48
