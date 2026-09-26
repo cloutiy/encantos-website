@@ -1,0 +1,4 @@
+for f in *.jpg *.jpeg; do
+  [ -e "$f" ] || continue
+  cwebp -q 75 -m 6 -af -mt -metadata none "$f" -o "${f%.*}.webp"
+done
