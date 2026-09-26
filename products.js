@@ -23,7 +23,7 @@ const productData = [
     "name": "Exfoliante facial y corporal de café",
     "description": "Un exfoliante suave que elimina las células muertas sin irritar la piel, mientras disminuye la hinchazón y las ojeras. Tonifica la piel y la deja radiante y revitalizada. Sus antioxidantes naturales del café protegen la piel del estrés oxidativo ambiental y estimulan la circulación para un cutis más saludable.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/9Rr4b",
-    "price": 25,
+    "price": 27,
     "catalog_id": 58,
     "ingredients": "Aceite de coco, aceite de girasol, café seleccionado molido, aceite esencial de limón.",
     "display_order": 1,
