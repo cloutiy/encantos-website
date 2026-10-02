@@ -8,6 +8,44 @@
     <link rel="stylesheet" href="encantos.css">
     <script src="products.js"></script>
    <script src="https://platform.simplebotinstall.com/w/chat_plugin.js" data-bot-id="11455"></script>
+
+    <!-- ============================================================
+         AD PIXEL CONFIG - fill in before running paid ads
+         ============================================================ -->
+
+    <!-- Meta (Facebook/Instagram) Pixel -->
+    <!-- 1. Get your Pixel ID from Events Manager > Data Sources > your Pixel > Settings -->
+    <!-- 2. Replace YOUR_META_PIXEL_ID in BOTH places below (script + noscript) -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_META_PIXEL_ID'); // <-- PLACEHOLDER: paste Pixel ID here
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_META_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- fbq('track', ...) calls for AddToCart / InitiateCheckout / Purchase
+         are already wired into the JS below at the matching points in the
+         funnel - no extra setup needed once the Pixel ID above is filled in. -->
+
+    <!-- Google Ads - not yet configured -->
+    <!-- If/when you run Google Ads: create a conversion action in Google Ads,
+         then paste the gtag.js snippet it gives you here, and add a
+         gtag('event', 'conversion', {...}) call where Purchase is tracked
+         below (same spot as the fbq('track', 'Purchase', ...) call). -->
+
+    <!-- TikTok Ads - not yet configured -->
+    <!-- If/when you run TikTok Ads: paste the TikTok Pixel base code
+         (from TikTok Ads Manager > Assets > Events) here, then add
+         ttq.track('CompletePayment', {...}) at the same Purchase spot below. -->
+
 </head>
 <body>
     <!-- Header with Hero Section -->
@@ -394,6 +432,18 @@
                     return;
                 }
                 modalOverlay.classList.add('open');
+
+                // Meta Pixel: InitiateCheckout (requires YOUR_META_PIXEL_ID set in <head>)
+                if (typeof fbq !== 'undefined') {
+                    const cartTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+                    fbq('track', 'InitiateCheckout', {
+                        content_ids: cart.map(item => item.id),
+                        content_type: 'product',
+                        num_items: cart.reduce((n, item) => n + item.quantity, 0),
+                        value: cartTotal,
+                        currency: 'PEN'
+                    });
+                }
             });
 
             cancelOrder.addEventListener('click', () => {
@@ -503,6 +553,17 @@
             
             updateCartUI();
             showNotification(`${product.name} añadido al carrito!`);
+
+            // Meta Pixel: AddToCart (requires YOUR_META_PIXEL_ID set in <head>)
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'AddToCart', {
+                    content_name: product.name,
+                    content_ids: [product.id],
+                    content_type: 'product',
+                    value: product.price * quantity,
+                    currency: 'PEN'
+                });
+            }
         }
 
         // Remove product from cart
@@ -677,6 +738,19 @@
 
             document.getElementById('checkout-form-view').classList.add('hidden');
             document.getElementById('order-confirmation-view').classList.remove('hidden');
+
+            // Meta Pixel: Purchase (requires YOUR_META_PIXEL_ID set in <head>)
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Purchase', {
+                    content_ids: orderData.cart.map(item => item.id),
+                    content_type: 'product',
+                    num_items: orderData.cart.reduce((n, item) => n + item.quantity, 0),
+                    value: orderData.total,
+                    currency: 'PEN'
+                });
+            }
+            // Google Ads / TikTok conversion events would also fire here,
+            // once their base pixel code is added in <head> (see placeholders above)
         }
 
         // "Volver a la tienda" - close modal, clear cart, reset form back to its default view
@@ -695,5 +769,9 @@
         // Initialize the app
         init();
     </script>
+
+    <!-- Cloudflare Web Analytics -->
+    <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a7ba9ea1d36a4d2188c265e13055ea4c"}'></script>
+    <!-- End Cloudflare Web Analytics -->
 </body>
 </html>
