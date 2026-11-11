@@ -604,7 +604,7 @@ const productData = [
     "description": "Formula botánica Antiacné con acción cicatrizante y reparadora a base de ingredientes botánicos puros\nCombate granos e impurezas sin resecar, repara y regenera la piel dañada y calma inflamacion e irritaciones.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/5KOrq",
     "price": 50,
-    "catalog_id": 58,
+    "catalog_id": 70,
     "ingredients": "Aceites de sacha inchi y girasol, oleato de manzanilla, extractos de cúrcuma, espirulina y manzanilla, sangre de grado, agua destilada, emulsificante natural.",
     "display_order": 54,
     "categogy": "Belleza facial"
