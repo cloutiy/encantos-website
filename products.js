@@ -14,7 +14,7 @@ const productData = [
     "description": "Labios con volumen y exuberantes. Color suave con efecto hidratante y humectante. Acabo glow. Aplicacion suave y pratico. Producto VEGANO. Libre de derivados de petroleo, metales pesados, disruptores hormonales  y parabenos.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/pwVAU",
     "price": 25,
-    "catalog_id": 1,
+    "catalog_id": 62,
     "ingredients": "Manteca de cacao, aceite de castaña amazónica, extracto de vainilla amazónica, aceites de ungurahui y de aguaje, cera vegana, pigmento vegetal.",
     "display_order": 1,
     "categogy": "Cosmeticos botanicos"
@@ -144,7 +144,7 @@ const productData = [
     "description": "Aceite de aguaje virgen , rico en beta-carotenos. Protege la piel del envejecimiento prematuro, ayuda a regenerar estrías y cicatrices, Ayuda a aclarar manchas. Un antioxidante natural alto en Vit. A y E. que protege de los radicales libres y los rayos UV.",
     "image": "https://encantos-automations-droppy.qsirhi.easypanel.host/$/73vYn",
     "price": 35,
-    "catalog_id": 1,
+    "catalog_id": 61,
     "ingredients": "Aceite de aguaje virgen (prensado en frio)",
     "display_order": 10,
     "categogy": "Belleza facial"
