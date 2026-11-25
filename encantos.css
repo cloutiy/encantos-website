@@ -1111,7 +1111,7 @@ header {
 /* Rotating Announcement Banner */
 .announcement-bar {
     position: relative;
-    height: 36px;
+    height: 40px;
     overflow: hidden;
     background: #f5f5f5;
     color: #1a1a1a;
@@ -1124,10 +1124,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 12px;
+    padding: 0 10px;
     text-align: center;
-    white-space: nowrap;
-    font-size: clamp(11px, 3vw, 13px);
+    line-height: 1.2;
+    text-wrap: balance;
+    font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.14em;
     opacity: 0;
@@ -1145,6 +1146,15 @@ header {
     33.33%  { transform: translateY(0);     opacity: 1; } /* stays ~2s */
     39.33%  { transform: translateY(-100%); opacity: 0; } /* slides out up */
     100%    { transform: translateY(-100%); opacity: 0; }
+}
+
+/* Mobile: smaller, tighter text so each message fits (wraps to 2 lines on very narrow phones) */
+@media (max-width: 600px) {
+    .announcement-bar .msg {
+        font-size: 10px;
+        letter-spacing: 0.05em;
+        padding: 0 8px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
