@@ -836,12 +836,12 @@ header {
 }
 
 #back-to-store-btn {
-    width: 100%;
-    background: #000000;
+width: 100%;
+background: #000000;
 }
 
 #back-to-store-btn:hover {
-    background: #333;
+background: #333;
 }
 
 /* Footer */
@@ -971,24 +971,24 @@ header {
 }
 
 @keyframes slideDown {
-    from { 
-        opacity: 0; 
-        transform: translateX(-50%) translateY(-20px); 
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
     }
-    to { 
-        opacity: 1; 
-        transform: translateX(-50%) translateY(0); 
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
     }
 }
 
 @keyframes slideUp {
-    from { 
-        opacity: 1; 
-        transform: translateX(-50%) translateY(0); 
+    from {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
     }
-    to { 
-        opacity: 0; 
-        transform: translateX(-50%) translateY(-20px); 
+    to {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
     }
 }
 
@@ -997,32 +997,32 @@ header {
     .products-grid {
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
-    
+
     .cart-sidebar {
         width: 320px;
     }
-    
+
     .store-name {
         font-size: 1.2rem;
     }
-    
+
     .logo {
         font-size: 1rem;
     }
-    
+
     .footer {
         padding: 2rem 1rem;
     }
-    
+
     .social-links {
         gap: 1rem;
     }
-    
+
     .social-link {
         width: 40px;
         height: 40px;
     }
-    
+
     .social-link i {
         font-size: 1rem;
     }
@@ -1038,7 +1038,7 @@ header {
     .search-bar input {
         border-radius: 4px;
     }
-    
+
     .cart-sidebar {
         width: 100%;
         right: -100%;
@@ -1053,22 +1053,22 @@ header {
         padding: 10px;
         align-items: flex-start;
     }
-    
+
     .checkout-modal {
         max-height: 95vh;
         padding: 20px;
         margin-top: 20px;
         margin-bottom: 20px;
     }
-    
+
     .modal-title {
         font-size: 1.4rem;
     }
-    
+
     .modal-actions {
         flex-direction: column;
     }
-    
+
     .cancel-btn, .submit-order {
         width: 100%;
     }
@@ -1083,7 +1083,7 @@ header {
     .checkout-modal {
         max-height: 95vh;
     }
-    
+
     .modal-overlay {
         align-items: flex-start;
     }
@@ -1098,11 +1098,11 @@ header {
     .notification {
         display: none !important;
     }
-    
+
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .product-card {
         break-inside: avoid;
     }
