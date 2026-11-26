@@ -104,6 +104,32 @@
         }
     </style>
 
+    <!-- Header background pattern (self-contained, does not depend on encantos.css) -->
+    <style>
+        header {
+            /* dark overlay on top of the pattern: lower the 0.5 to show more color, raise it for more readable text */
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("encantos-bg.webp") center / 420px 420px repeat;
+            background-color: #000;
+            padding: 1.1rem 0;
+        }
+        header .store-name,
+        header .hero-content p,
+        header .logo {
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+        }
+        header .hamburger-btn {
+            filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8));
+        }
+        @media (max-width: 600px) {
+            header {
+                background-size: 300px 300px;
+                padding: 0.9rem 0;
+            }
+        }
+    </style>
+
 </head>
 <body>
     <!-- Rotating announcement banner -->
